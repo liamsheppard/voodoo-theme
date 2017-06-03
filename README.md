@@ -2,4 +2,4 @@
 
 ---
 
-![](/images/main.png)
+![](https://cdn.rawgit.com/liamsheppard/voodoo-theme/e84e152a/images/main.png)
