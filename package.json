@@ -1,0 +1,22 @@
+{
+    "name": "voodoo",
+    "displayName": "Voodoo",
+    "description": "voodoo theme",
+    "version": "0.0.1",
+    "publisher": "liamsheppard",
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Voodoo",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Voodoo-color-theme.json"
+            }
+        ]
+    }
+}
