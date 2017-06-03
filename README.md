@@ -1,3 +1,5 @@
 # Voodoo Theme for VS Code
 
-![Hero Image](/images/pic-1.png)
+<p align="center"><img src="images/icon.svg"/></p>
+
+<p align="center"><img src="images/text.svg"/></p>
