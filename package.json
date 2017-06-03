@@ -8,7 +8,7 @@
         "color": "#25273e",
         "theme": "dark"
     },
-    "icon": "images/icon.png",
+    "icon": "images/icon.svg",
     "engines": {
         "vscode": "^1.12.0"
     },
