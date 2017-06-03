@@ -1,3 +1,3 @@
 # Voodoo Theme for VS Code
 
-![Hero Image](/pic-1.png)
+![Hero Image](/images/pic-1.png)
