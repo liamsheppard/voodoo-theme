@@ -1,5 +1,1 @@
-# Voodoo Theme for VS Code
-
-<p align="center"><img src="images/icon-voodoo.svg"/></p>
-
-<p align="center"><img src="images/text-voodoo.svg"/></p>
+<p align="center"><img src="https://cdn.rawgit.com/liamsheppard/voodoo-theme/a2493966/images/readme-icon.svg"/></p>
