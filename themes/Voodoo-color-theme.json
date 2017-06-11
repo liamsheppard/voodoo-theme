@@ -136,7 +136,7 @@
 			"name": "Keywords",
 			"scope": "keyword",
 			"settings": {
-				"foreground": "#F45B69"
+				"foreground": "#EF476F"
 			}
 		},
 		{
@@ -144,7 +144,7 @@
 			"scope": "storage",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#818CEF"
+				"foreground": "#6752F2"
 			}
 		},
 		{
@@ -152,7 +152,7 @@
 			"scope": "storage.type",
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#818CEF"
+				"foreground": "#6752F2"
 			}
 		},
 		{
@@ -180,14 +180,6 @@
 			"settings": {
 				"fontStyle": "",
 				"foreground": "#F1D302"
-			}
-		},
-		{
-			"name": "Function arguments",
-			"scope": "variable.parameter",
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#6873D6"
 			}
 		},
 		{
@@ -328,7 +320,7 @@
 		},
 		{
 			"name": "[JavaScript] Variable Other Object",
-			"scope": "source.js meta.var.expr variable.other.object",
+			"scope": "source.js variable.other.object",
 			"settings": {
 				"foreground": "#60D394"
 			}
