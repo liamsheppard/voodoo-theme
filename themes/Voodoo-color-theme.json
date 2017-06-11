@@ -5,7 +5,7 @@
 		"editor.background": "#25273e",
 		"activityBarBadge.background": "#6752F2",
 		"activityBar.foreground": "#fff",
-		"activityBarBadge.foreground": "#1D1E30",
+		"activityBarBadge.foreground": "#fff",
 		"tab.inactiveBackground": "#1D1E30",
 		"tab.activeBackground": "#25273e",
 		"button.background": "#6752F2",
