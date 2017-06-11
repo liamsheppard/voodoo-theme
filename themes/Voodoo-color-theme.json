@@ -60,7 +60,7 @@
 		"peekViewResult.matchHighlightBackground": "#F1D302cc",
 		"peekViewEditor.matchHighlightBackground": "#F1D302cc",
 
-		"debugToolBar.background": "#6752F2",
+		"debugToolBar.background": "#1D1E30",
 		"editorGutter.background": "#25273e",
 		"editorGutter.addedBackground": "#ADE25Daa",
 		"editorGutter.deletedBackground": "#EF476Faa",
