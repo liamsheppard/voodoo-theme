@@ -105,7 +105,9 @@
 		"textLink.foreground": "#18a5fc",
 		"merge.currentHeaderBackground": "#60FFAF",
 
-		"terminal.ansiBlack": "#1D1E30",
+		"statusBar.debuggingBackground": "#EF476F",
+
+		"terminal.ansiBlack": "#525889",
 		"terminal.ansiRed": "#EF476F",
 		"terminal.ansiGreen": "#A2FF6D",
 		"terminal.ansiYellow": "#F1D302",
@@ -113,7 +115,7 @@
 		"terminal.ansiMagenta": "#6752F2",
 		"terminal.ansiCyan": "#60FFAF",
 		"terminal.ansiWhite": "#e5e9f0",
-		"terminal.ansiBrightBlack": "#25273e",
+		"terminal.ansiBrightBlack": "#525889",
 		"terminal.ansiBrightRed": "#EF476F",
 		"terminal.ansiBrightGreen": "#A2FF6D",
 		"terminal.ansiBrightYellow": "#F1D302",
