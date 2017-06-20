@@ -22,12 +22,17 @@
 		"sideBarSectionHeader.background": "#1D1E30",
 		"editor.foreground": "#D3D4D9",
 		"panel.background": "#1D1E30",
+	    
 		"list.activeSelectionForeground": "#1D1E30",
 		"list.activeSelectionBackground": "#A2FF6D",
 		"list.focusBackground": "#A2FF6DDD",
 		"list.focusForeground": "#1D1E30",
 		"list.inactiveSelectionBackground": "#00000044",
 		"list.hoverBackground": "#00000088",
+	      	"list.highlightForeground": "#6752F2",
+	    	"pickerGroup.border": "#6752F233",
+	      	"pickerGroup.foreground": "#525889",
+	    
 		"sideBar.background": "#1D1E30",
 		"editor.lineHighlightBackground": "#1D1E30",
 		"editor.lineHighlightBorder": "#1D1E30",
@@ -98,12 +103,14 @@
 		"peekViewResult.matchHighlightBackground": "#3535FF55",
 		"peekViewEditor.matchHighlightBackground": "#3535FF55",
 
-		"editorCodeLens.foreground": "#1D1E30",
+		"editorCodeLens.foreground": "#525889",
 		"editorWhitespace.foreground": "#6752F233",
 		"editorIndentGuide.background": "#6752F233",
 
 		"textLink.foreground": "#18a5fc",
-		"merge.currentHeaderBackground": "#60FFAF",
+		"merge.currentHeaderBackground": "#60FFAF77",
+	    	"merge.incomingHeaderBackground": "#6752F299",
+	    
 
 		"statusBar.debuggingBackground": "#EF476F",
 
