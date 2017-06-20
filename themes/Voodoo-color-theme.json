@@ -22,17 +22,17 @@
 		"sideBarSectionHeader.background": "#1D1E30",
 		"editor.foreground": "#D3D4D9",
 		"panel.background": "#1D1E30",
-	    
+
 		"list.activeSelectionForeground": "#1D1E30",
 		"list.activeSelectionBackground": "#A2FF6D",
 		"list.focusBackground": "#A2FF6DDD",
 		"list.focusForeground": "#1D1E30",
 		"list.inactiveSelectionBackground": "#00000044",
 		"list.hoverBackground": "#00000088",
-	      	"list.highlightForeground": "#6752F2",
-	    	"pickerGroup.border": "#6752F233",
-	      	"pickerGroup.foreground": "#525889",
-	    
+		"list.highlightForeground": "#6752F2",
+		"pickerGroup.border": "#6752F233",
+		"pickerGroup.foreground": "#525889",
+
 		"sideBar.background": "#1D1E30",
 		"editor.lineHighlightBackground": "#1D1E30",
 		"editor.lineHighlightBorder": "#1D1E30",
@@ -71,12 +71,13 @@
 
 		"debugToolBar.background": "#1D1E30",
 		"editorGutter.background": "#25273e",
-		"editorGutter.addedBackground": "#A2FF6Daa",
+		"editorGutter.addedBackground": "#60FFAFaa",
 		"editorGutter.deletedBackground": "#EF476Faa",
 		"editorGutter.modifiedBackground": "#6752F2aa",
-		"diffEditor.insertedTextBackground": "#A2FF6D66",
+
+		"diffEditor.insertedTextBackground": "#60FFAF77",
 		"diffEditor.removedTextBackground": "#EF476F66",
-		
+
 		"peekViewEditorGutter.background": "#1D1E30",
 		"peekView.border": "#1D1E30",
 		"peekViewEditor.background": "#1D1E30",
@@ -109,8 +110,8 @@
 
 		"textLink.foreground": "#18a5fc",
 		"merge.currentHeaderBackground": "#60FFAF77",
-	    	"merge.incomingHeaderBackground": "#6752F299",
-	    
+		"merge.incomingHeaderBackground": "#6752F299",
+
 
 		"statusBar.debuggingBackground": "#EF476F",
 
@@ -325,7 +326,7 @@
 				"meta.separator.markdown"
 			],
 			"settings": {
-				"foreground": "#515587" 
+				"foreground": "#515587"
 			}
 		},
 		{
@@ -349,7 +350,7 @@
 				"foreground": "#F1D302"
 			}
 		},
-		
+
 
 		{
 			"name": "[CSS/SCSS] Variable",
@@ -373,6 +374,37 @@
 		},
 
 		{
+			"name": "[JavaScript] TryCatch",
+			"scope": "source.js keyword.control.trycatch",
+			"settings": {
+				"foreground": "#EF476F"
+			}
+		},
+		{
+			"name": "[JavaScript] Debugger",
+			"scope": "source.js keyword.other.debugger",
+			"settings": {
+				"foreground": "#EF476F",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "[JavaScript] Console log/warn/error",
+			"scope": "source.js support.function.console",
+			"settings": {
+				"foreground": "#18a5fc",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "[JavaScript] Default keyword",
+			"scope": "source.js keyword.control.default",
+			"settings": {
+				"foreground": "#18a5fc",
+				"fontStyle": "italic"
+			}
+		},
+		{
 			"name": "[JavaScript] Meta Object-Literal Key",
 			"scope": "source.js meta.object-literal.key",
 			"settings": {
@@ -395,7 +427,10 @@
 		},
 		{
 			"name": "[JavaScript] Variable Other Object",
-			"scope": "source.js variable.other.object",
+			"scope": [
+				"source.js variable.other.object",
+				"source.js variable.other.readwrite"
+			],
 			"settings": {
 				"fontStyle": "",
 				"foreground": "#60FFAF"
