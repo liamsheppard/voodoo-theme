@@ -75,8 +75,8 @@
 		"editorGutter.deletedBackground": "#EF476Faa",
 		"editorGutter.modifiedBackground": "#6e61ffaa",
 
-		"diffEditor.insertedTextBackground": "#60FFAF44",
-		"diffEditor.removedTextBackground": "#EF476F66",
+		"diffEditor.insertedTextBackground": "#60FFAF22",
+		"diffEditor.removedTextBackground": "#EF476F44",
 
 		"peekViewEditorGutter.background": "#1D1E30",
 		"peekView.border": "#1D1E30",
