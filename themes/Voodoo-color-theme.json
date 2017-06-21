@@ -401,6 +401,25 @@
 			}
 		},
 		{
+			"name": "[React] HTML Tags",
+			"scope": [
+				"source.js punctuation.definition.tag.begin",
+				"source.js punctuation.definition.tag.end"
+			],
+			"settings": {
+				"fontStyle": "",
+				"foreground": "#EF476F"
+			}
+		},
+		{
+			"name": "[React] React Component Tags",
+			"scope":"source.js support.class.component",
+			"settings": {
+				"fontStyle": "",
+				"foreground": "#F1D302"
+			}
+		},
+		{
 			"name": "[JavaScript] Console log/warn/error",
 			"scope": "source.js support.function.console",
 			"settings": {
@@ -445,7 +464,8 @@
 			"name": "[JavaScript] Default keyword",
 			"scope": [
 				"source.js keyword.control.conditional",
-				"source.js keyword.control.switch"
+				"source.js keyword.control.switch",
+				"source.js keyword.control.flow"
 			],
 			"settings": {
 				"foreground": "#6e61ff"
