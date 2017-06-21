@@ -75,7 +75,7 @@
 		"editorGutter.deletedBackground": "#EF476Faa",
 		"editorGutter.modifiedBackground": "#6e61ffaa",
 
-		"diffEditor.insertedTextBackground": "#60FFAF77",
+		"diffEditor.insertedTextBackground": "#60FFAF44",
 		"diffEditor.removedTextBackground": "#EF476F66",
 
 		"peekViewEditorGutter.background": "#1D1E30",
@@ -390,7 +390,11 @@
 		},
 		{
 			"name": "[JavaScript] Object Definition",
-			"scope": "source.js keyword.operator.logical",
+			"scope": [
+				"source.js keyword.operator.logical",
+				"source.js keyword.operator.relational",
+				"source.js keyword.operator.comparison"
+			],
 			"settings": {
 				"fontStyle": "",
 				"foreground": "#EF476F"
@@ -438,21 +442,20 @@
 			}
 		},
 		{
-			"name": "[JavaScript] Variable Other Object",
+			"name": "[JavaScript] Default keyword",
 			"scope": [
-				"source.js variable.other.object",
-				"source.js variable.other.readwrite"
+				"source.js keyword.control.conditional",
+				"source.js keyword.control.switch"
 			],
 			"settings": {
-				"fontStyle": "",
-				"foreground": "#60FFAF"
+				"foreground": "#6e61ff"
 			}
 		},
 		{
-			"name": "[JavaScript] Variable Other Read-Write Alias",
-			"scope": "source.js variable.other.readwrite.alias",
+			"name": "[JavaScript] Default keyword",
+			"scope": "source.js keyword.control.switch",
 			"settings": {
-				"foreground": "#60FFAF"
+				"foreground": "#EF476F"
 			}
 		},
 
