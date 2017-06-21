@@ -416,7 +416,7 @@
 			"scope":"source.js support.class.component",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#F1D302"
+				"foreground": "#60FFAF"
 			}
 		},
 		{
@@ -458,6 +458,14 @@
 			"settings": {
 				"foreground": "#6e61ff",
 				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "[JavaScript] Imported Items",
+			"scope": "source.js meta.import variable.other.readwrite.alias",
+			"settings": {
+				"foreground": "#60FFAF",
+				"fontStyle": ""
 			}
 		},
 		{
