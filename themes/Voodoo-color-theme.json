@@ -481,7 +481,7 @@
 		},
 		{
 			"name": "[JavaScript] Default keyword",
-			"scope": "source.js keyword.control.switch",
+			"scope": "source.js keyword.control.loop",
 			"settings": {
 				"foreground": "#EF476F"
 			}
