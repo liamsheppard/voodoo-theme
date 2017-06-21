@@ -93,7 +93,7 @@
 		"editorLink.activeForeground": "#6e61ff",
 		"editorBracketMatch.background": "#3535FF55",
 
-		"editor.selectionBackground": "#3535FFCC",
+		"editor.selectionBackground": "#3535FFBB",
 		"editor.wordHighlightStrongBackground": "#3535FF99",
 		"editor.wordHighlightBackground": "#3535FF55",
 		"editor.rangeHighlightBackground": "#3535FF55",
