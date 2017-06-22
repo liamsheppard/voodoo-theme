@@ -469,7 +469,7 @@
 			}
 		},
 		{
-			"name": "[JavaScript] Default keyword",
+			"name": "[JavaScript] IfElse / Switch / Return",
 			"scope": [
 				"source.js keyword.control.conditional",
 				"source.js keyword.control.switch",
@@ -480,8 +480,18 @@
 			}
 		},
 		{
-			"name": "[JavaScript] Default keyword",
+			"name": "[JavaScript] Exit Loop",
 			"scope": "source.js keyword.control.loop",
+			"settings": {
+				"foreground": "#EF476F"
+			}
+		},
+		{
+			"name": "[JavaScript] String Interpolation Punctuation",
+			"scope": [
+				"source.js punctuation.definition.template-expression.begin",
+				"source.js punctuation.definition.template-expression.end"
+			],
 			"settings": {
 				"foreground": "#EF476F"
 			}
