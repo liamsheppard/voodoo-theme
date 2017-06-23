@@ -480,6 +480,13 @@
 			}
 		},
 		{
+			"name": "[JavaScript] This",
+			"scope": "source.js variable.language.this",
+			"settings": {
+				"foreground": "#6e61ff"
+			}
+		},
+		{
 			"name": "[JavaScript] Exit Loop",
 			"scope": "source.js keyword.control.loop",
 			"settings": {
