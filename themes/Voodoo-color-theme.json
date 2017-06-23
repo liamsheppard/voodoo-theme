@@ -503,7 +503,6 @@
 				"foreground": "#EF476F"
 			}
 		},
-
 		{
 			"name": "[JavaScript] Object Definition",
 			"scope": "meta.object.type meta.definition.property",
@@ -512,6 +511,7 @@
 				"foreground": "#F1D302"
 			}
 		},
+
 		{
 			"name": "[HTML] Constant Character Entity",
 			"scope": "text.html.basic constant.character.entity.html",
@@ -525,6 +525,51 @@
 			"settings": {
 				"foreground": "#ED5AC3",
 				"fontStyle": "italic"
+			}
+		},
+
+		{
+			"name": "[Ruby] KeyWord Control",
+			"scope": [
+				"source.ruby keyword.control",
+				"source.ruby keyword.other.special-method"
+			],
+			"settings": {
+				"fontStyle": "",
+				"foreground": "#6e61ff"
+			}
+		},
+		{
+			"name": "[Ruby] Variable Definition",
+			"scope": "source.ruby punctuation.definition.variable",
+			"settings": {
+				"fontStyle": "",
+				"foreground": "#EF476F"
+			}
+		},
+		{
+			"name": "[Ruby] Assignment Operator",
+			"scope": "source.ruby keyword.operator.assignment.augmented",
+			"settings": {
+				"fontStyle": "",
+				"foreground": "#EF476F"
+			}
+		},
+
+		{
+			"name": "[HAML] Tag Punctuation",
+			"scope": "text.haml punctuation.definition.tag",
+			"settings": {
+				"fontStyle": "",
+				"foreground": "#6e61ff"
+			}
+		},
+		{
+			"name": "[HAML] Embedded Ruby",
+			"scope": "text.haml meta.line.ruby",
+			"settings": {
+				"fontStyle": "",
+				"foreground": "#6e61ff"
 			}
 		}
 	]
