@@ -549,24 +549,18 @@
 		},
 		{
 			"name": "[Ruby] Assignment Operator",
-			"scope": "source.ruby keyword.operator.assignment.augmented",
+			"scope": [
+				"source.ruby keyword.operator.assignment.augmented",
+				"source.ruby keyword.operator.logical"
+			],
 			"settings": {
 				"fontStyle": "",
 				"foreground": "#EF476F"
 			}
 		},
-
 		{
 			"name": "[HAML] Tag Punctuation",
 			"scope": "text.haml punctuation.definition.tag",
-			"settings": {
-				"fontStyle": "",
-				"foreground": "#6e61ff"
-			}
-		},
-		{
-			"name": "[HAML] Embedded Ruby",
-			"scope": "text.haml meta.line.ruby",
 			"settings": {
 				"fontStyle": "",
 				"foreground": "#6e61ff"
