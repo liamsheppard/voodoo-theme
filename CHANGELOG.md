@@ -6,5 +6,9 @@
   - Terminal
   - Quick Picker
   - Merge Conflicts
-- Tweaked MD, CSS, and JS syntax theming
+- Tweaked syntax theming for:
+  - MD
+  - CSS
+  - JS
+  - Ruby
 - Fixed some areas where there were issues with legibility/contrast
