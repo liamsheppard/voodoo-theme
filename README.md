@@ -1,9 +1,9 @@
-<p align="center"><img src="https://cdn.rawgit.com/liamsheppard/voodoo-theme/e9b84b44/images/readme-icon.svg"/></p>
+<p align="center"><img src="https://github.com/liamsheppard/voodoo-theme/blob/master/images/readme-icon.png?raw=true"/></p>
 
 A dark, neon-inspired theme for VS-Code
 
 ---
 
-I'm new to theming, so feel free to create issues or PRs! 👻
+Issues and PRs are welcome! 👻
 
 ![](https://github.com/liamsheppard/voodoo-theme/blob/master/images/main.png?raw=true)
