@@ -523,11 +523,25 @@
 			"name": "[HTML] Constant Other Inline-Data",
 			"scope": "text.html.basic constant.other.inline-data",
 			"settings": {
-				"foreground": "#ED5AC3",
+				"foreground": "#EF476F",
 				"fontStyle": "italic"
 			}
 		},
 
+		{
+			"name": "Ruby Regex",
+			"scope": "source.ruby string.regexp.classic",
+			"settings": {
+				"foreground": "#F1D302"
+			}
+		},
+		{
+			"name": "Ruby Regex Punctuation",
+			"scope": "source.ruby string.regexp.classic punctuation.definition.string",
+			"settings": {
+				"foreground": "#EF476F"
+			}
+		},
 		{
 			"name": "[Ruby] KeyWord Control",
 			"scope": [
