@@ -492,6 +492,34 @@
 				"foreground": "#F1D302"
 			}
 		},
+		{
+			"name": "[Javascript] Regex",
+			"scope": [
+				"source.js string.regexp",
+				"source.js constant.other.character-class.regexp",
+				"source.js constant.other.character-class.set.regexp"
+			],
+			"settings": {
+				"foreground": "#F1D302"
+			}
+		},
+		{
+			"name": "[Javascript] Regex Punctuation",
+			"scope": "source.js string.regexp punctuation",
+			"settings": {
+				"foreground": "#EF476F"
+			}
+		},
+		{
+			"name": "[Javascript] Regex Special Characters",
+			"scope": [
+				"source.js string.regexp keyword.control.anchor",
+				"source.js string.regexp keyword.operator"
+			],
+			"settings": {
+				"foreground": "#6e61ff"
+			}
+		},
 
 		{
 			"name": "[React] HTML Tags",
