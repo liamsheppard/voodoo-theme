@@ -401,25 +401,6 @@
 			}
 		},
 		{
-			"name": "[React] HTML Tags",
-			"scope": [
-				"source.js punctuation.definition.tag.begin",
-				"source.js punctuation.definition.tag.end"
-			],
-			"settings": {
-				"fontStyle": "",
-				"foreground": "#EF476F"
-			}
-		},
-		{
-			"name": "[React] React Component Tags",
-			"scope":"source.js support.class.component",
-			"settings": {
-				"fontStyle": "",
-				"foreground": "#60FFAF"
-			}
-		},
-		{
 			"name": "[JavaScript] Console log/warn/error",
 			"scope": "source.js support.function.console",
 			"settings": {
@@ -509,6 +490,26 @@
 			"settings": {
 				"fontStyle": "",
 				"foreground": "#F1D302"
+			}
+		},
+
+		{
+			"name": "[React] HTML Tags",
+			"scope": [
+				"source.js punctuation.definition.tag.begin",
+				"source.js punctuation.definition.tag.end"
+			],
+			"settings": {
+				"fontStyle": "",
+				"foreground": "#EF476F"
+			}
+		},
+		{
+			"name": "[React] React Component Tags",
+			"scope":"source.js support.class.component",
+			"settings": {
+				"fontStyle": "",
+				"foreground": "#60FFAF"
 			}
 		},
 
