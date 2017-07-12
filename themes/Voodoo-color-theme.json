@@ -608,6 +608,42 @@
 				"fontStyle": "",
 				"foreground": "#6e61ff"
 			}
+		},
+
+		{
+			"name": "[Shell] Control",
+			"scope": "source.shell keyword.control",
+			"settings": {
+				"foreground": "#6e61ff"
+			}
+		},
+		{
+			"name": "[Shell] Operators",
+			"scope": "source.shell keyword.operator",
+			"settings": {
+				"foreground": "#EF476F"
+			}
+		},
+		{
+			"name": "[Shell] String Variable",
+			"scope": [
+				"source.shell string variable.other.bracket",
+				"source.shell string string.interpolated.dollar"
+			],
+			"settings": {
+				"foreground": "#D3D4D9"
+			}
+		},
+		{
+			"name": "[Shell] String Brackets",
+			"scope": [
+				"source.shell punctuation.definition",
+				"source.shell string variable.other.bracket punctuation.definition",
+				"source.shell string string.interpolated.dollar punctuation.definition"
+			],
+			"settings": {
+				"foreground": "#EF476F"
+			}
 		}
 	]
 }
