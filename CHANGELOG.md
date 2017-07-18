@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 0.3.18
+- Add colours for JS documentation
+- Add colours for some more `.sh` selectors
+
 ## Version 0.3.17
 - Adjust the hex values of panel backgrounds
 - Adjust the hex values of green and cyan so they're easier to differentiate
