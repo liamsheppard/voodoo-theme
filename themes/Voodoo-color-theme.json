@@ -521,6 +521,27 @@
 				"foreground": "#6e61ff"
 			}
 		},
+		{
+			"name": "[Javascript] @param Documentation",
+			"scope": "source.js comment.block.documentation.js storage.type.class.jsdoc",
+			"settings": {
+				"foreground": "#00EA8C99"
+			}
+		},
+		{
+			"name": "[Javascript] Param Name Documentation",
+			"scope": "source.js comment.block.documentation.js entity.name.type.instance.jsdoc",
+			"settings": {
+				"foreground": "#EF476F99"
+			}
+		},
+		{
+			"name": "[Javascript] Param Other Documentation",
+			"scope": "source.js comment.block.documentation.js variable.other.jsdoc",
+			"settings": {
+				"foreground": "#6e61ff99"
+			}
+		},
 
 		{
 			"name": "[React] HTML Tags",
