@@ -673,6 +673,34 @@
 			"settings": {
 				"foreground": "#EF476F"
 			}
+		},
+		{
+			"name": "[Shell] Shebang",
+			"scope": "source.shell comment.line.shebang",
+			"settings": {
+				"foreground": "#F1D302"
+			}
+		},
+		{
+			"name": "[Shell] Shebang Hash",
+			"scope": "source.shell punctuation.definition.comment.line.shebang",
+			"settings": {
+				"foreground": "#EF476F"
+			}
+		},
+		{
+			"name": "[Shell] Newline",
+			"scope": "source.shell constant.character.escape.newline",
+			"settings": {
+				"foreground": "#515587"
+			}
+		},
+		{
+			"name": "[Shell] Comment",
+			"scope": "source.shell punctuation.definition.comment",
+			"settings": {
+				"foreground": "#515587"
+			}
 		}
 	]
 }
