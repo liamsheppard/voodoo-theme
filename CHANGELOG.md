@@ -1,5 +1,8 @@
 # Change Log
 
+## Version 0.3.19
+- Add colours for git status in file explorer
+
 ## Version 0.3.18
 - Add colours for JS documentation
 - Add colours for some more `.sh` selectors
