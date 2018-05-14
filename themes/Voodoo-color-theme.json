@@ -39,7 +39,6 @@
 		"editor.lineHighlightBorder": "#1E2035",
 		"tab.border": "#1E2035",
 		"statusBar.background": "#1E2035",
-		"notification.background": "#1E2035",
 		"titleBar.activeBackground": "#1E2035",
 		"editorGroup.dropBackground": "#1E203588",
 		"editorGroup.border": "#434770",
@@ -139,12 +138,6 @@
 		"terminal.ansiBrightWhite": "#e5e9f0"
 	},
 	"tokenColors": [
-		{
-			"settings": {
-				"background": "#000c18",
-				"foreground": "#ED5AC3"
-			}
-		},
 		{
 			"name": "Comments",
 			"scope": "comment",
@@ -395,7 +388,7 @@
 			}
 		},
 		{
-			"name": "[JavaScript] Object Definition",
+			"name": "[JavaScript] Punctuation, Comparison",
 			"scope": [
 				"source.js keyword.operator.logical",
 				"source.js keyword.operator.relational",
@@ -460,7 +453,7 @@
 			"scope": [
 				"source.js keyword.control.conditional",
 				"source.js keyword.control.switch",
-				"source.js keyword.control.flow",
+				"source.js keyword.control.flow"
 			],
 			"settings": {
 				"foreground": "#6e61ff"
@@ -510,6 +503,16 @@
 			}
 		},
 		{
+			"name": "[Javascript] User-Defined Constant",
+			"scope": [
+        "source.js variable.other.constant.js",
+        "source.js variable.other.constant.property.js"
+      ],
+			"settings": {
+				"foreground": "#EF476F"
+			}
+		},
+		{
 			"name": "[Javascript] Regex Punctuation",
 			"scope": "source.js string.regexp punctuation",
 			"settings": {
@@ -528,9 +531,7 @@
 		},
 		{
 			"name": "[Javascript] Typeof",
-			"scope": [
-				"source.js keyword.operator.expression.typeof.js",
-			],
+			"scope": "source.js keyword.operator.expression.typeof.js",
 			"settings": {
 				"foreground": "#6e61ff"
 			}
@@ -582,19 +583,32 @@
 			"scope": [
 				"source.ts keyword.control.export.ts",
 				"source.ts keyword.control.import.ts",
-				"source.ts meta.import.ts",
+				"source.ts meta.import.ts"
 			],
 			"settings": {
-				"foreground": "#6e61ff",
+				"foreground": "#6e61ff"
+			}
+		},
+		{
+			"name": "[JavaScript] Punctuation, Comparison",
+			"scope": [
+				"source.ts keyword.operator.logical.ts",
+				"source.ts keyword.operator.relational.ts",
+				"source.ts keyword.operator.comparison.ts"
+			],
+			"settings": {
+				"fontStyle": "",
+				"foreground": "#EF476F"
 			}
 		},
 		{
 			"name": "[TypeScript] Import Variable",
 			"scope": [
-				"source.ts meta.import.ts variable.other.readwrite.alias.js",
-			],
+        "source.ts meta.import.ts variable.other.readwrite.alias.ts",
+			  "source.ts meta.import-equals.external.ts variable.other.readwrite.alias.ts"
+      ],
 			"settings": {
-				"foreground": "#00EA8C",
+				"foreground": "#00EA8C"
 			}
 		},
 		{
@@ -610,29 +624,30 @@
 		},
 		{
 			"name": "[TypeScript] Object Key",
-			"scope": [
-				"source.ts meta.object-literal.key.ts",
-			],
+			"scope": "source.ts meta.object-literal.key.ts",
 			"settings": {
-				"foreground": "#00EA8C",
+				"foreground": "#00EA8C"
 			}
 		},
 		{
 			"name": "[TypeScript] Type Definition Typeof",
-			"scope": [
-				"source.ts meta.type.annotation.ts keyword.operator.expression.typeof.ts",
-			],
+			"scope": "source.ts meta.type.annotation.ts keyword.operator.expression.typeof.ts",
 			"settings": {
-				"foreground": "#6e61ff",
+				"foreground": "#6e61ff"
 			}
 		},
 		{
 			"name": "[TypeScript] Type Definition Property",
-			"scope": [
-				"source.ts meta.definition.property.ts",
-			],
+			"scope": "source.ts meta.definition.property.ts",
 			"settings": {
-				"foreground": "#F1D302",
+				"foreground": "#F1D302"
+			}
+		},
+		{
+			"name": "[TypeScript] Require",
+			"scope": "source.ts keyword.control.require.ts",
+			"settings": {
+				"foreground": "#F1D302"
 			}
 		},
 
