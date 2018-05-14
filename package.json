@@ -2,7 +2,7 @@
     "name": "voodoo",
     "displayName": "Voodoo",
     "description": "A dark, supernatural and neon-inspired theme",
-    "version": "0.3.19",
+    "version": "0.4.0",
     "publisher": "liamsheppard",
     "galleryBanner": {
         "color": "#25273e",
@@ -31,5 +31,8 @@
                 "path": "./themes/Voodoo-color-theme.json"
             }
         ]
+    },
+    "dependencies": {
+        "vsce": "^1.40.0"
     }
 }
