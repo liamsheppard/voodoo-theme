@@ -1,5 +1,12 @@
 # Change Log
 
+## Version 0.4.0
+- Add support for a bunch of Typescript syntax:
+  - Import/Export
+  - If/Else/Switch/Flow
+  - Object keys
+  - Type definitions
+
 ## Version 0.3.19
 - Add colours for git status in file explorer
 
