@@ -20,7 +20,7 @@
 		"inputOption.activeBorder": "#93FF66",
 		"input.foreground": "#D3D4D9",
 		"editor.foreground": "#D3D4D9",
-		"panel.background": "#1E2035",
+    "panel.background": "#1E2035",
 
 		"sideBar.background": "#17192B",
 		"sideBarSectionHeader.background": "#17192B",
@@ -62,6 +62,13 @@
 		"editorMarkerNavigationError.background": "#EF476F",
 		"editorMarkerNavigationWarning.background": "#F1D302",
     "editorMarkerNavigation.background": "#525889",
+    "editorOverviewRuler.addedForeground": "#00EA8Caa",
+    "editorOverviewRuler.deletedForeground": "#EF476Faa",
+    "editorOverviewRuler.modifiedForeground": "#6E61FFaa",
+    "editorOverviewRuler.warningForeground": "#F1D302aa",
+    "editorOverviewRuler.errorForeground": "#EF476Faa",
+    "editorOverviewRuler.findMatchForeground": "#3535FFaa",
+    "editorOverviewRuler.bracketMatchForeground": "#D3D4D9aa",
 
 		"editorOverviewRuler.border": "#515587",
 		"panel.border": "#515587",
