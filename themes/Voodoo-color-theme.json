@@ -61,7 +61,7 @@
 		"editorWidget.background": "#25273e",
 		"editorMarkerNavigationError.background": "#EF476F",
 		"editorMarkerNavigationWarning.background": "#F1D302",
-		"editorMarkerNavigation.background": "#525889",
+    "editorMarkerNavigation.background": "#525889",
 
 		"editorOverviewRuler.border": "#515587",
 		"panel.border": "#515587",
@@ -81,6 +81,9 @@
     "gitDecoration.deletedResourceForeground": "#EF476F",
     "gitDecoration.untrackedResourceForeground": "#00EA8C",
     "gitDecoration.conflictingResourceForeground": "#F1D302",
+    "gitDecoration.addedResourceForeground": "#93FF66",
+    "list.warningForeground": "#F1D302",
+    "list.errorForeground": "#EF476F",
     "gitDecoration.ignoredResourceForeground": "#525889",
 
 		"peekViewEditorGutter.background": "#1E2035",
