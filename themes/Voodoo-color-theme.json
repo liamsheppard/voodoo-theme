@@ -45,7 +45,7 @@
 		"scrollbarSlider.background": "#43477066",
 		"scrollbarSlider.activeBackground": "#434770DD",
 		"scrollbarSlider.hoverBackground": "#434770AA",
-		"editorGroup.background": "#1E2035",
+		"editorGroup.emptyBackground": "#1E2035",
 		"editorGroupHeader.tabsBackground": "#1E2035",
 		"tab.activeForeground": "#93FF66",
 		"tab.inactiveForeground": "#434770",
@@ -384,14 +384,14 @@
 
 		{
 			"name": "[JavaScript] TryCatch",
-			"scope": "source.js keyword.control.trycatch",
+			"scope": "keyword.control.trycatch",
 			"settings": {
 				"foreground": "#EF476F"
 			}
 		},
 		{
 			"name": "[JavaScript] Debugger",
-			"scope": "source.js keyword.other.debugger",
+			"scope": "keyword.other.debugger",
 			"settings": {
 				"foreground": "#EF476F",
 				"fontStyle": "italic"
@@ -400,9 +400,9 @@
 		{
 			"name": "[JavaScript] Punctuation, Comparison",
 			"scope": [
-				"source.js keyword.operator.logical",
-				"source.js keyword.operator.relational",
-				"source.js keyword.operator.comparison"
+				"keyword.operator.logical",
+				"keyword.operator.relational",
+				"keyword.operator.comparison"
 			],
 			"settings": {
 				"fontStyle": "",
@@ -411,7 +411,7 @@
 		},
 		{
 			"name": "[JavaScript] Console log/warn/error",
-			"scope": "source.js support.function.console",
+			"scope": "support.function.console",
 			"settings": {
 				"foreground": "#6e61ff",
 				"fontStyle": "italic"
@@ -419,21 +419,21 @@
 		},
 		{
 			"name": "[JavaScript] Meta Object-Literal Key",
-			"scope": "source.js meta.object-literal.key",
+			"scope": "meta.object-literal.key",
 			"settings": {
 				"foreground": "#00EA8C"
 			}
 		},
 		{
 			"name": "[JavaScript](JSDoc) Storage Type Class",
-			"scope": "source.js storage.type.class.jsdoc",
+			"scope": "storage.type.class.jsdoc",
 			"settings": {
 				"foreground": "#00EA8C"
 			}
 		},
 		{
 			"name": "[JavaScript] Support Type Primitive",
-			"scope": "source.js support.type.primitive",
+			"scope": "support.type.primitive",
 			"settings": {
 				"foreground": "#6e61ff"
 			}
@@ -441,9 +441,9 @@
 		{
 			"name": "[JavaScript] Default keyword",
 			"scope": [
-				"source.js keyword.control.default",
-				"source.js keyword.control.export",
-				"source.js meta.import"
+				"keyword.control.default",
+				"keyword.control.export",
+				"meta.import"
 			],
 			"settings": {
 				"foreground": "#6e61ff",
@@ -452,7 +452,7 @@
 		},
 		{
 			"name": "[JavaScript] Imported Items",
-			"scope": "source.js meta.import variable.other.readwrite.alias",
+			"scope": "meta.import variable.other.readwrite.alias",
 			"settings": {
 				"foreground": "#00EA8C",
 				"fontStyle": ""
@@ -461,9 +461,9 @@
 		{
 			"name": "[JavaScript] IfElse / Switch / Return",
 			"scope": [
-				"source.js keyword.control.conditional",
-				"source.js keyword.control.switch",
-				"source.js keyword.control.flow"
+				"keyword.control.conditional",
+				"keyword.control.switch",
+				"keyword.control.flow"
 			],
 			"settings": {
 				"foreground": "#6e61ff"
@@ -471,23 +471,30 @@
 		},
 		{
 			"name": "[JavaScript] This",
-			"scope": "source.js variable.language.this",
+			"scope": "variable.language.this",
 			"settings": {
 				"foreground": "#6e61ff"
 			}
 		},
 		{
 			"name": "[JavaScript] Exit Loop",
-			"scope": "source.js keyword.control.loop",
+			"scope": "keyword.control.loop",
 			"settings": {
 				"foreground": "#EF476F"
 			}
 		},
 		{
 			"name": "[JavaScript] String Interpolation Punctuation",
+			"scope":	"meta.template.expression",
+			"settings": {
+				"foreground": "#D3D4D9"
+			}
+		},
+		{
+			"name": "[JavaScript] String Interpolation Punctuation",
 			"scope": [
-				"source.js punctuation.definition.template-expression.begin",
-				"source.js punctuation.definition.template-expression.end"
+				"punctuation.definition.template-expression.begin",
+				"punctuation.definition.template-expression.end"
 			],
 			"settings": {
 				"foreground": "#EF476F"
@@ -504,9 +511,9 @@
 		{
 			"name": "[Javascript] Regex",
 			"scope": [
-				"source.js string.regexp",
-				"source.js constant.other.character-class.regexp",
-				"source.js constant.other.character-class.set.regexp"
+				"string.regexp",
+				"constant.other.character-class.regexp",
+				"constant.other.character-class.set.regexp"
 			],
 			"settings": {
 				"foreground": "#F1D302"
@@ -515,8 +522,8 @@
 		{
 			"name": "[Javascript] User-Defined Constant",
 			"scope": [
-        "source.js variable.other.constant.js",
-        "source.js variable.other.constant.property.js"
+        "variable.other.constant",
+        "variable.other.constant.property"
       ],
 			"settings": {
 				"foreground": "#EF476F"
@@ -524,7 +531,7 @@
 		},
 		{
 			"name": "[Javascript] Regex Punctuation",
-			"scope": "source.js string.regexp punctuation",
+			"scope": "string.regexp punctuation",
 			"settings": {
 				"foreground": "#EF476F"
 			}
@@ -532,8 +539,8 @@
 		{
 			"name": "[Javascript] Regex Special Characters",
 			"scope": [
-				"source.js string.regexp keyword.control.anchor",
-				"source.js string.regexp keyword.operator"
+				"string.regexp keyword.control.anchor",
+				"string.regexp keyword.operator"
 			],
 			"settings": {
 				"foreground": "#6e61ff"
@@ -541,28 +548,28 @@
 		},
 		{
 			"name": "[Javascript] Typeof",
-			"scope": "source.js keyword.operator.expression.typeof.js",
+			"scope": "keyword.operator.expression.typeof.js",
 			"settings": {
 				"foreground": "#6e61ff"
 			}
 		},
 		{
 			"name": "[Javascript] @param Documentation",
-			"scope": "source.js comment.block.documentation.js storage.type.class.jsdoc",
+			"scope": "comment.block.documentation.js storage.type.class.jsdoc",
 			"settings": {
 				"foreground": "#00EA8C99"
 			}
 		},
 		{
 			"name": "[Javascript] Param Name Documentation",
-			"scope": "source.js comment.block.documentation.js entity.name.type.instance.jsdoc",
+			"scope": "comment.block.documentation.js entity.name.type.instance.jsdoc",
 			"settings": {
 				"foreground": "#EF476F99"
 			}
 		},
 		{
 			"name": "[Javascript] Param Other Documentation",
-			"scope": "source.js comment.block.documentation.js variable.other.jsdoc",
+			"scope": "comment.block.documentation.js variable.other.jsdoc",
 			"settings": {
 				"foreground": "#6e61ff99"
 			}
@@ -571,8 +578,8 @@
 		{
 			"name": "[React] HTML Tags",
 			"scope": [
-				"source.js punctuation.definition.tag.begin",
-				"source.js punctuation.definition.tag.end"
+				"punctuation.definition.tag.begin",
+				"punctuation.definition.tag.end"
 			],
 			"settings": {
 				"fontStyle": "",
@@ -581,7 +588,7 @@
 		},
 		{
 			"name": "[React] React Component Tags",
-			"scope":"source.js support.class.component",
+			"scope":"support.class.component",
 			"settings": {
 				"fontStyle": "",
 				"foreground": "#00EA8C"
@@ -593,7 +600,10 @@
 			"scope": [
 				"source.ts keyword.control.export.ts",
 				"source.ts keyword.control.import.ts",
-				"source.ts meta.import.ts"
+				"source.ts meta.import.ts",
+				"source.tsx keyword.control.export.tsx",
+				"source.tsx keyword.control.import.tsx",
+				"source.tsx meta.import.tsx"
 			],
 			"settings": {
 				"foreground": "#6e61ff"
@@ -604,7 +614,10 @@
 			"scope": [
 				"source.ts keyword.operator.logical.ts",
 				"source.ts keyword.operator.relational.ts",
-				"source.ts keyword.operator.comparison.ts"
+				"source.ts keyword.operator.comparison.ts",
+				"source.tsx keyword.operator.logical.tsx",
+				"source.tsx keyword.operator.relational.tsx",
+				"source.tsx keyword.operator.comparison.tsx"
 			],
 			"settings": {
 				"fontStyle": "",
@@ -615,7 +628,9 @@
 			"name": "[TypeScript] Import Variable",
 			"scope": [
         "source.ts meta.import.ts variable.other.readwrite.alias.ts",
-			  "source.ts meta.import-equals.external.ts variable.other.readwrite.alias.ts"
+			  "source.ts meta.import-equals.external.ts variable.other.readwrite.alias.ts",
+        "source.tsx meta.import.tsx variable.other.readwrite.alias.tsx",
+			  "source.tsx meta.import-equals.external.tsx variable.other.readwrite.alias.tsx"
       ],
 			"settings": {
 				"foreground": "#00EA8C"
@@ -626,7 +641,10 @@
 			"scope": [
 				"source.ts keyword.control.conditional.ts",
 				"source.ts keyword.control.switch.ts",
-				"source.ts keyword.control.flow.ts"
+				"source.ts keyword.control.flow.ts",
+				"source.tsx keyword.control.conditional.tsx",
+				"source.tsx keyword.control.switch.tsx",
+				"source.tsx keyword.control.flow.tsx"
 			],
 			"settings": {
 				"foreground": "#6e61ff"
@@ -634,30 +652,54 @@
 		},
 		{
 			"name": "[TypeScript] Object Key",
-			"scope": "source.ts meta.object-literal.key.ts",
+			"scope": [
+        "source.ts meta.object-literal.key.ts",
+        "source.tsx meta.object-literal.key.tsx"
+      ],
 			"settings": {
 				"foreground": "#00EA8C"
 			}
 		},
 		{
 			"name": "[TypeScript] Type Definition Typeof",
-			"scope": "source.ts meta.type.annotation.ts keyword.operator.expression.typeof.ts",
+			"scope": [
+        "source.ts meta.type.annotation.ts keyword.operator.expression.typeof.ts",
+        "source.tsx meta.type.annotation.tsx keyword.operator.expression.typeof.tsx"
+      ],
 			"settings": {
 				"foreground": "#6e61ff"
 			}
 		},
 		{
 			"name": "[TypeScript] Type Definition Property",
-			"scope": "source.ts meta.definition.property.ts",
+			"scope": [
+        "source.ts meta.definition.property.ts",
+        "source.tsx meta.definition.property.tsx",
+      ],
 			"settings": {
 				"foreground": "#F1D302"
 			}
 		},
 		{
 			"name": "[TypeScript] Require",
-			"scope": "source.ts keyword.control.require.ts",
+			"scope": [
+        "source.ts keyword.control.require.ts",
+        "source.tsx keyword.control.require.tsx"
+      ],
 			"settings": {
 				"foreground": "#F1D302"
+			}
+		},
+		{
+			"name": "[TypeScript] String Interpolation Punctuation",
+			"scope": [
+        "source.ts punctuation.definition.template-expression.begin",
+				"source.ts punctuation.definition.template-expression.end",
+        "source.tsx punctuation.definition.template-expression.begin",
+				"source.tsx punctuation.definition.template-expression.end"
+			],
+			"settings": {
+				"foreground": "#EF476F"
 			}
 		},
 
