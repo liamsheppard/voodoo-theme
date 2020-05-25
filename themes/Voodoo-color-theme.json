@@ -816,14 +816,14 @@
 		},
 		{
 			"name": "[Shell] Shebang",
-			"scope": "source.shell comment.line.shebang",
+			"scope": "source.shell comment.line.number-sign.shebang.shell",
 			"settings": {
 				"foreground": "#F1D302"
 			}
 		},
 		{
 			"name": "[Shell] Shebang Hash",
-			"scope": "source.shell punctuation.definition.comment.line.shebang",
+			"scope": "source.shell punctuation.definition.comment.shebang.shell",
 			"settings": {
 				"foreground": "#EF476F"
 			}
