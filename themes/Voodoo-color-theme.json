@@ -60,7 +60,7 @@
     "editorHoverWidget.border": "#1E2035",
     "editor.hoverHighlightBackground": "#93FF6622",
     "editorSuggestWidget.highlightForeground": "#6e61ff",
-    "editorHoverWidget.foreground": "#ff0000",
+    "editorHoverWidget.foreground": "#D3D4D9",
     "editorWidget.background": "#25273e",
     "editorMarkerNavigationError.background": "#EF476F",
     "editorMarkerNavigationWarning.background": "#F1D302",
