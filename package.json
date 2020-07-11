@@ -23,7 +23,40 @@
 	"categories": [
 		"Themes"
 	],
+	"main": "builder/extension.js",
+	"activationEvents": [
+		"onCommand:voodoo.startBuilder",
+		"onCommand:voodoo.buildTheme"
+	],
 	"contributes": {
+		"jsonValidation": [
+			{
+				"fileMatch": "themes/theme-src.json",
+				"url": "./theme-src.schema.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "voodoo.startBuilder",
+				"title": "Start Voodoo theme's builder extension"
+			},
+			{
+				"command": "voodoo.buildTheme",
+				"title": "Build Voodoo theme's file from source"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "voodoo.startBuilder",
+					"when": "voodoo.builder.enabled == false"
+				},
+				{
+					"command": "voodoo.buildTheme",
+					"when": "voodoo.builder.enabled == true"
+				}
+			]
+		},
 		"themes": [
 			{
 				"label": "Voodoo",
@@ -32,7 +65,9 @@
 			}
 		]
 	},
-	"dependencies": {
+	"dependencies": {},
+	"devDependencies": {
+		"strip-json-comments": "^3.1.0",
 		"vsce": "^1.40.0"
 	}
 }

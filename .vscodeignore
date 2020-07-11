@@ -1,0 +1,5 @@
+.editorconfig
+.gitignore
+vsc-extension-quickstart.md
+node_modules
+.vscode
