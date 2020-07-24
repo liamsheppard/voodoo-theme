@@ -24,6 +24,8 @@ const VOODOO_THEME_SCHEMA_EDITS = {
 		},
 		colors: {
 			additionalProperties: {
+				description:
+					"Additional workbench color, most likely contributed by a missing extension.",
 				type: "string",
 				pattern: VOODOO_VARIABLE_USAGE_REGEXP,
 				defaultSnippets: [{ body: "${1:" + VOODOO_VARIABLE_USAGE_DEFAULT + "}" }],
