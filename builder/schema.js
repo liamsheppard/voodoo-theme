@@ -2,7 +2,7 @@ const { writeFile } = require("fs").promises;
 const vscode = require("vscode");
 
 const VOODOO_VARIABLE_USAGE_REGEXP =
-	"^\\$[A-Za-z0-9_]*(\\ ((?:100|\\d{1,2})%?|(?:\\.|0\\.)\\d+|1\\.0+))?$";
+	"^\\$[A-Za-z0-9_]*(\\ ((?:100|\\d{1,2}(?:\\.\\d+)?)%|(?:\\.|0\\.)\\d+|1\\.0+))?$";
 const VOODOO_VARIABLE_NAME_REGEXP = "^\\$[A-Za-z0-9_]*$";
 const VOODOO_VARIABLE_USAGE_DEFAULT = "$";
 const VOODOO_TOKEN_SETTINGS_DEFINITION_POINTER =
