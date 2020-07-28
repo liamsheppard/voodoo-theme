@@ -38,11 +38,15 @@
 		"commands": [
 			{
 				"command": "voodoo.startBuilder",
-				"title": "Start Voodoo theme's builder extension"
+				"title": "Voodoo: Start Voodoo theme's builder extension"
 			},
 			{
 				"command": "voodoo.buildTheme",
-				"title": "Build Voodoo theme's file from source"
+				"title": "Voodoo: Build Voodoo theme's file from source"
+			},
+			{
+				"command": "voodoo.checkConformity",
+				"title": "Voodoo: Check the active Voodoo theme's file conformity to a given reference."
 			}
 		],
 		"menus": {
@@ -53,6 +57,10 @@
 				},
 				{
 					"command": "voodoo.buildTheme",
+					"when": "voodoo.builder.enabled == true"
+				},
+				{
+					"command": "voodoo.checkConformity",
 					"when": "voodoo.builder.enabled == true"
 				}
 			]

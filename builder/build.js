@@ -9,14 +9,23 @@ class ParsedThemeObject {
 	 * Constructor taking in the Voodoo theme source file's raw content as
 	 * a string and using it to populate the object's properties.
 	 * @param {string} jsonSource the Voodoo theme source file's content.
+	 * @param {boolean} useRawValues whether to parse variables or use their raw values.
 	 */
-	constructor(jsonSource) {
+	constructor(jsonSource, useRawValues = false) {
 		// Parse the json source.
-		const source = JSON.parse(stripJsonComments(jsonSource));
+		let source = JSON.parse(
+			stripJsonComments(jsonSource).replace(/\,(?!\s*?[\{\[\"\'\w])/g, "")
+		);
 
 		// Parse the theme's properties.
 		this.colors = {};
 		this.tokenColors = [];
+
+		Object.getOwnPropertyNames(source)
+			.filter((property) => !this.hasOwnProperty(property))
+			.forEach((property) => (this[property] = source[property]));
+
+		source.useRawValues = useRawValues;
 
 		this._parseColors(source);
 		this._parseTokenColors(source);
@@ -27,7 +36,7 @@ class ParsedThemeObject {
 
 		// Check if variable exists.
 		if (!source.hasOwnProperty("variables") || !(components[0] in source.variables)) {
-			return undefined;
+			return value;
 		}
 
 		// Check whether to apply a custom opacity.
@@ -63,8 +72,13 @@ class ParsedThemeObject {
 
 	_parseTokenColors(source) {
 		// Check if the theme's source does contain token colors.
-		if (!source.hasOwnProperty("tokenColors") || !source.hasOwnProperty("variables")) {
+		if (!source.hasOwnProperty("tokenColors")) {
 			return;
+		}
+
+		// Use raw source token colors' values.
+		if (source.useRawValues) {
+			return (this.tokenColors = source.tokenColors);
 		}
 
 		// Filter out tokens without settings.
@@ -76,29 +90,26 @@ class ParsedThemeObject {
 				return;
 			}
 
-			let hex = this._parseVariable(scope.settings.foreground, source);
-
-			if (hex) {
-				scope.settings.foreground = hex;
-			}
+			scope.settings.foreground = this._parseVariable(scope.settings.foreground, source);
 		});
 
 		this.tokenColors = tokenColors;
 	}
 
 	_parseColors(source) {
-		// Check if the theme's source does not contain any colors.
-		if (!source.hasOwnProperty("colors") || !source.hasOwnProperty("variables")) {
+		// Check if the theme's source does contain colors.
+		if (!source.hasOwnProperty("colors")) {
 			return;
+		}
+
+		// Use raw source colors' values.
+		if (source.useRawValues) {
+			return (this.colors = source.colors);
 		}
 
 		// Parse colors from the source's colors and variables properties.
 		Object.entries(source.colors).forEach(([key, value]) => {
-			let hex = this._parseVariable(value, source);
-
-			if (hex) {
-				this.colors[key] = hex;
-			}
+			this.colors[key] = this._parseVariable(value, source);
 		});
 	}
 }
@@ -110,7 +121,6 @@ const { readFile, writeFile } = require("fs").promises;
  * vscode's built-in color theme schema and returns the resulting parsed
  * theme object.
  * @param {vscode.ExtensionContext} context the active Voodoo theme's extension context.
- * @returns the parsed theme object.
  */
 async function buildThemeFile(context) {
 	const themeSourcePath = context.extensionPath + "/themes/theme-src.json";
@@ -122,4 +132,4 @@ async function buildThemeFile(context) {
 	await writeFile(themePath, JSON.stringify(themeObject) + "\n", "utf-8");
 }
 
-module.exports = { buildThemeFile };
+module.exports = { buildThemeFile, ParsedThemeObject };
