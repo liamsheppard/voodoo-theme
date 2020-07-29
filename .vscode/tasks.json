@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Voodoo Theme",
+			"detail": "Build Voodoo theme's file from source",
+			"command": "echo ${input:build}",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	],
+	"inputs": [
+		{
+			"id": "build",
+			"type": "command",
+			"command": "voodoo.buildTheme"
+		}
+	]
+}
