@@ -95,7 +95,6 @@
         "list.activeSelectionBackground": "$lime_accent",
         "list.activeSelectionForeground": "$dark_blue_background",
         "list.focusBackground": "$darker_blue_background",
-        "list.focusForeground": "$dark_blue_background",
         "list.highlightForeground": "$blue_primary",
         "list.hoverBackground": "$black_hover",
         "list.inactiveSelectionBackground": "$black_inactive",
@@ -162,7 +161,6 @@
         "editorSuggestWidget.background": "$dark_blue_background",
         "editorSuggestWidget.border": "$dark_blue_background",
         "editorSuggestWidget.highlightForeground": "$blue_primary",
-        "editorSuggestWidget.selectedBackground": "$blue_tertiary",
         "editorHoverWidget.foreground": "$foreground",
         "editorHoverWidget.background": "$dark_blue_background",
         "editorHoverWidget.border": "$dark_blue_background",
@@ -266,22 +264,24 @@
             "name": "Storage",
             "scope": "storage",
             "settings": {
-                "foreground": "$blue_primary"
+                "foreground": "$blue_primary",
+                "fontStyle": ""
             }
         },
         {
             "name": "Storage Types",
             "scope": "storage.type",
             "settings": {
-                "fontStyle": "italic",
-                "foreground": "$blue_primary"
+                "foreground": "$blue_primary",
+                "fontStyle": "italic"
             }
         },
         {
             "name": "Argument",
             "scope": "meta.function-call.arguments variable.parameter.function-call",
             "settings": {
-                "foreground": "$green_accent"
+                "foreground": "$green_accent",
+                "fontStyle": ""
             }
         },
         {
@@ -300,8 +300,8 @@
             "name": "Class Names",
             "scope": ["entity.name.class", "entity.name.type"],
             "settings": {
-                "fontStyle": "italic",
-                "foreground": "$red_accent"
+                "foreground": "$red_accent",
+                "fontStyle": "italic"
             }
         },
         {
@@ -315,51 +315,56 @@
             "name": "Inherited Class",
             "scope": "entity.other.inherited-class",
             "settings": {
-                "fontStyle": "italic",
-                "foreground": "$red_accent"
+                "foreground": "$red_accent",
+                "fontStyle": "italic"
             }
         },
         {
             "name": "Tag Names",
             "scope": "entity.name.tag",
             "settings": {
-                "foreground": "$red_accent"
+                "foreground": "$red_accent",
+                "fontStyle": ""
             }
         },
         {
             "name": "Tag Attributes",
             "scope": "entity.other.attribute-name",
             "settings": {
-                "fontStyle": "italic",
-                "foreground": "$blue_primary"
+                "foreground": "$blue_primary",
+                "fontStyle": "italic"
             }
         },
         {
             "name": "Function Names",
             "scope": ["entity.name.function", "meta.function-call.generic"],
             "settings": {
-                "foreground": "$yellow_accent"
+                "foreground": "$yellow_accent",
+                "fontStyle": ""
             }
         },
         {
             "name": "Library Functions",
             "scope": "support.function",
             "settings": {
-                "foreground": "$yellow_accent"
+                "foreground": "$yellow_accent",
+                "fontStyle": ""
             }
         },
         {
             "name": "Library Constants",
             "scope": "support.constant",
             "settings": {
-                "foreground": "$yellow_accent"
+                "foreground": "$yellow_accent",
+                "fontStyle": ""
             }
         },
         {
             "name": "Library Classes and Types",
             "scope": ["support.type", "support.class"],
             "settings": {
-                "foreground": "$green_accent"
+                "foreground": "$green_accent",
+                "fontStyle": ""
             }
         },
         {
@@ -380,7 +385,7 @@
         },
         {
             "name": "[CSS/SCSS] Additionnal Property Value",
-            "scope": ["meta.property-value.scss", "meta.property-value.css"],
+            "scope": ["meta.property-value.css", "meta.property-value.scss"],
             "settings": {
                 "foreground": "$red_accent"
             }
@@ -391,8 +396,8 @@
             "name": "[Diff] Header",
             "scope": ["meta.diff", "meta.diff.header"],
             "settings": {
-                "fontStyle": "italic",
-                "foreground": "$foreground_secondary"
+                "foreground": "$foreground_secondary",
+                "fontStyle": "italic"
             }
         },
         {
@@ -445,7 +450,8 @@
             "name": "[Haml] Tag Punctuation",
             "scope": "text.haml punctuation.definition.tag",
             "settings": {
-                "foreground": "$blue_primary"
+                "foreground": "$blue_primary",
+                "fontStyle": ""
             }
         },
 
@@ -461,8 +467,8 @@
             "name": "[HTML] Constant Other Inline Data",
             "scope": "text.html.basic constant.other.inline-data",
             "settings": {
-                "fontStyle": "italic",
-                "foreground": "$red_accent"
+                "foreground": "$red_accent",
+                "fontStyle": "italic"
             }
         },
 
@@ -478,8 +484,8 @@
             "name": "[Javascript] Debugger",
             "scope": "keyword.other.debugger",
             "settings": {
-                "fontStyle": "italic",
-                "foreground": "$red_accent"
+                "foreground": "$red_accent",
+                "fontStyle": "italic"
             }
         },
         {
@@ -490,15 +496,16 @@
                 "keyword.operator.comparison"
             ],
             "settings": {
-                "foreground": "$red_accent"
+                "foreground": "$red_accent",
+                "fontStyle": ""
             }
         },
         {
             "name": "[Javascript] Console Log/Warn/Error",
             "scope": "support.function.console",
             "settings": {
-                "fontStyle": "italic",
-                "foreground": "$blue_primary"
+                "foreground": "$blue_primary",
+                "fontStyle": "italic"
             }
         },
         {
@@ -552,15 +559,16 @@
                 "meta.import"
             ],
             "settings": {
-                "fontStyle": "italic",
-                "foreground": "$blue_primary"
+                "foreground": "$blue_primary",
+                "fontStyle": "italic"
             }
         },
         {
-            "name": "[Javascript] Imported Objects",
+            "name": "[Javascript] Imported Object",
             "scope": "meta.import variable.other.readwrite.alias",
             "settings": {
-                "foreground": "$green_accent"
+                "foreground": "$green_accent",
+                "fontStyle": ""
             }
         },
         {
@@ -609,7 +617,8 @@
             "name": "[Javascript] Object Definition",
             "scope": "meta.object.type meta.definition.property",
             "settings": {
-                "foreground": "$yellow_accent"
+                "foreground": "$yellow_accent",
+                "fontStyle": ""
             }
         },
         {
@@ -696,7 +705,7 @@
         },
         {
             "name": "[Markdown] Code",
-            "scope": ["markup.inline.raw", "markup.fenced_code.block"],
+            "scope": ["markup.fenced_code.block", "markup.inline.raw"],
             "settings": {
                 "foreground": "$red_accent"
             }
@@ -740,14 +749,16 @@
                 "punctuation.definition.tag.end"
             ],
             "settings": {
-                "foreground": "$red_accent"
+                "foreground": "$red_accent",
+                "fontStyle": ""
             }
         },
         {
             "name": "[React] React Component Tags",
             "scope": "support.class.component",
             "settings": {
-                "foreground": "$green_accent"
+                "foreground": "$green_accent",
+                "fontStyle": ""
             }
         },
 
@@ -770,7 +781,8 @@
             "name": "[Ruby] Variable Definition",
             "scope": "source.ruby punctuation.definition.variable",
             "settings": {
-                "foreground": "$red_accent"
+                "foreground": "$red_accent",
+                "fontStyle": ""
             }
         },
         {
@@ -780,7 +792,8 @@
                 "source.ruby keyword.operator.logical"
             ],
             "settings": {
-                "foreground": "$red_accent"
+                "foreground": "$red_accent",
+                "fontStyle": ""
             }
         },
         {
@@ -790,7 +803,8 @@
                 "source.ruby keyword.other.special-method"
             ],
             "settings": {
-                "foreground": "$blue_primary"
+                "foreground": "$blue_primary",
+                "fontStyle": ""
             }
         },
 
@@ -861,20 +875,6 @@
 
         // Typescript
         {
-            "name": "[Typescript] Export/Import",
-            "scope": [
-                "source.ts keyword.control.export.ts",
-                "source.ts keyword.control.import.ts",
-                "source.ts meta.import.ts",
-                "source.tsx keyword.control.export.tsx",
-                "source.tsx keyword.control.import.tsx",
-                "source.tsx meta.import.tsx"
-            ],
-            "settings": {
-                "foreground": "$blue_primary"
-            }
-        },
-        {
             "name": "[Typescript] Import Variable",
             "scope": [
                 "source.ts meta.import.ts variable.other.readwrite.alias.ts",
@@ -897,21 +897,8 @@
                 "source.tsx keyword.operator.comparison.tsx"
             ],
             "settings": {
-                "foreground": "$red_accent"
-            }
-        },
-        {
-            "name": "[Typescript] If Else, Switch, Return",
-            "scope": [
-                "source.ts keyword.control.conditional.ts",
-                "source.ts keyword.control.switch.ts",
-                "source.ts keyword.control.flow.ts",
-                "source.tsx keyword.control.conditional.tsx",
-                "source.tsx keyword.control.switch.tsx",
-                "source.tsx keyword.control.flow.tsx"
-            ],
-            "settings": {
-                "foreground": "$blue_primary"
+                "foreground": "$red_accent",
+                "fontStyle": ""
             }
         },
         {
