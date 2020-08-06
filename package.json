@@ -1,38 +1,81 @@
 {
-    "name": "voodoo",
-    "displayName": "Voodoo",
-    "description": "A dark, supernatural and neon-inspired theme",
-    "version": "0.9.1",
-    "publisher": "liamsheppard",
-    "galleryBanner": {
-        "color": "#25273e",
-        "theme": "dark"
-    },
-    "icon": "images/icon.png",
-    "engines": {
-        "vscode": "^1.12.0"
-    },
-    "bugs": {
-        "url": "https://github.com/liamsheppard/voodoo-theme/issues"
-    },
-    "homepage": "https://github.com/liamsheppard/voodoo-theme/blob/master/README.md",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/liamsheppard/voodoo-theme"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Voodoo",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Voodoo-color-theme.json"
-            }
-        ]
-    },
-    "dependencies": {
-        "vsce": "^1.40.0"
-    }
+	"name": "voodoo",
+	"displayName": "Voodoo",
+	"description": "A dark, supernatural and neon-inspired theme",
+	"version": "0.10.0",
+	"publisher": "liamsheppard",
+	"galleryBanner": {
+		"color": "#25273e",
+		"theme": "dark"
+	},
+	"icon": "images/icon.png",
+	"engines": {
+		"vscode": "^1.12.0"
+	},
+	"bugs": {
+		"url": "https://github.com/liamsheppard/voodoo-theme/issues"
+	},
+	"homepage": "https://github.com/liamsheppard/voodoo-theme/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/liamsheppard/voodoo-theme"
+	},
+	"categories": [
+		"Themes"
+	],
+	"main": "builder/extension.js",
+	"activationEvents": [
+		"onCommand:voodoo.startBuilder",
+		"onCommand:voodoo.buildTheme"
+	],
+	"contributes": {
+		"jsonValidation": [
+			{
+				"fileMatch": "themes/theme-src.json",
+				"url": "./theme-src.schema.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "voodoo.startBuilder",
+				"title": "Voodoo: Start Voodoo theme's builder extension"
+			},
+			{
+				"command": "voodoo.buildTheme",
+				"title": "Voodoo: Build Voodoo theme's file from source"
+			},
+			{
+				"command": "voodoo.checkConformity",
+				"title": "Voodoo: Check the active Voodoo theme's file conformity to a given reference."
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "voodoo.startBuilder",
+					"when": "voodoo.builder.enabled == false"
+				},
+				{
+					"command": "voodoo.buildTheme",
+					"when": "voodoo.builder.enabled == true"
+				},
+				{
+					"command": "voodoo.checkConformity",
+					"when": "voodoo.builder.enabled == true"
+				}
+			]
+		},
+		"themes": [
+			{
+				"label": "Voodoo",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Voodoo-color-theme.json"
+			}
+		]
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"strip-json-comments": "^3.1.0",
+		"vsce": "^1.40.0"
+	}
 }

@@ -1,0 +1,21 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines
+[*]
+end_of_line = lf
+charset = utf-8
+
+# Keep spaces for theme's indentation
+[*.json]
+indent_style = space
+indent_size = 4
+
+[*.md]
+indent_style = space
+indent_size = 2
+
+[{*.js,package.json,launch.json,tasks.json}]
+indent_style = tab
+indent_size = 4
+max_line_length = 100

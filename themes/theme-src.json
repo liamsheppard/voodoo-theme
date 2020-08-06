@@ -1,0 +1,983 @@
+{
+    "variables": {
+        "$__highlight": "#ff0000",
+        "$blue_accent": "#18a5fc",
+        "$blue_primary": "#6e61ff",
+        "$blue_primary_hover": "#6e61ffdd",
+        "$blue_primary_background": "#6e61ff33",
+        "$blue_primary_highlight": "#6e61ffaa",
+        "$blue_primary_highlight_secondary": "#6e61ff99",
+        "$blue_secondary": "#434770",
+        "$blue_secondary_active": "#434770dd",
+        "$blue_secondary_hover": "#434770aa",
+        "$blue_secondary_background": "#43477066",
+        "$blue_secondary_light": "#515587",
+        "$blue_secondary_lighter": "#525889",
+        "$blue_secondary_darker": "#51557D",
+        "$blue_tertiary": "#25273e",
+        "$blue_highlight_opaque": "#3535ff",
+        "$blue_highlight": "#3535ffbb",
+        "$blue_highlight_secondary": "#3535ffee",
+        "$blue_highlight_tertiary": "#3535ffaa",
+        "$blue_highlight_background": "#3535ff55",
+        "$blue_highlight_background_strong": "#3535ff99",
+        "$lime_accent": "#93ff66",
+        "$lime_accent_focus": "#93ff66dd",
+        "$lime_accent_background": "#93ff6622",
+        "$green_accent": "#00ea8c",
+        "$green_highlight": "#00ea8caa",
+        "$green_highlight_secondary": "#00ea8c99",
+        "$green_highlight_tertiary": "#00ea8c77",
+        "$green_highlight_background": "#00ea8c22",
+        "$red_accent": "#ef476f",
+        "$red_highlight": "#ef476faa",
+        "$red_highlight_secondary": "#ef476f99",
+        "$red_highlight_dark": "#ef476f44",
+        "$yellow_accent": "#f1d302",
+        "$yellow_highlight": "#f1d302aa",
+        "$dark_blue_background": "#1e2035",
+        "$dark_blue_background_hover": "#1e203588",
+        "$darker_blue_background": "#17192b",
+        "$foreground": "#d3d4d9",
+        "$foreground_highlight": "#d3d4d9aa",
+        "$foreground_secondary": "#e5e9f0",
+        "$white": "#fff",
+        "$black_hover": "#00000088",
+        "$black_inactive": "#00000044"
+    },
+    "name": "Voodoo",
+    "colors": {
+        // Activity Bar
+        "activityBar.background": "$dark_blue_background",
+        "activityBar.foreground": "$white",
+        "activityBarBadge.background": "$lime_accent",
+        "activityBarBadge.foreground": "$dark_blue_background",
+
+        // Side Bar
+        "sideBar.background": "$darker_blue_background",
+        "sideBarSectionHeader.background": "$darker_blue_background",
+
+        // Minimap
+        "minimap.findMatchHighlight": "$blue_highlight_opaque",
+        "minimap.selectionHighlight": "$lime_accent",
+        "minimap.errorHighlight": "$red_accent",
+        "minimap.warningHighlight": "$yellow_accent",
+
+        // Base Colors
+        "focusBorder": "$blue_secondary",
+        "errorForeground": "$lime_accent",
+
+        // Text Colors
+        "textLink.foreground": "$blue_accent",
+
+        // Button Control
+        "button.background": "$blue_primary",
+        "button.foreground": "$white",
+        "button.hoverBackground": "$blue_primary_hover",
+
+        // Dropdown Control
+        "dropdown.background": "$blue_secondary",
+        "dropdown.border": "$blue_secondary_light",
+        "dropdown.foreground": "$foreground",
+
+        // Input Control
+        "input.background": "$blue_secondary",
+        "input.border": "$blue_secondary",
+        "input.foreground": "$white",
+        "inputOption.activeBorder": "$lime_accent",
+
+        // Scrollbar Control
+        "scrollbarSlider.activeBackground": "$blue_secondary_active",
+        "scrollbarSlider.background": "$blue_secondary_background",
+        "scrollbarSlider.hoverBackground": "$blue_secondary_hover",
+
+        // Lists and Trees
+        "list.activeSelectionBackground": "$lime_accent",
+        "list.activeSelectionForeground": "$dark_blue_background",
+        "list.focusBackground": "$darker_blue_background",
+        "list.highlightForeground": "$blue_primary",
+        "list.hoverBackground": "$black_hover",
+        "list.inactiveSelectionBackground": "$black_inactive",
+        "list.inactiveSelectionForeground": "$lime_accent",
+        "list.errorForeground": "$red_accent",
+        "list.warningForeground": "$yellow_accent",
+        "tree.indentGuidesStroke": "$blue_secondary",
+
+        // Editor Groups and Tabs
+        "editorGroup.border": "$blue_secondary",
+        "editorGroup.dropBackground": "$dark_blue_background_hover",
+        "editorGroupHeader.tabsBackground": "$dark_blue_background",
+        "editorGroup.emptyBackground": "$dark_blue_background",
+        "tab.activeBackground": "$blue_tertiary",
+        "tab.activeForeground": "$lime_accent",
+        "tab.border": "$dark_blue_background",
+        "tab.inactiveBackground": "$dark_blue_background",
+        "tab.inactiveForeground": "$blue_secondary",
+
+        // Editor Colors
+        "editor.background": "$blue_tertiary",
+        "editor.foreground": "$foreground",
+        "editorLineNumber.foreground": "$blue_secondary",
+        "editorCursor.foreground": "$lime_accent",
+        "editor.selectionBackground": "$blue_highlight",
+        "editor.selectionHighlightBackground": "$blue_highlight_background",
+        "editor.wordHighlightBackground": "$blue_highlight_background",
+        "editor.wordHighlightStrongBackground": "$blue_highlight_background_strong",
+        "editor.findMatchBackground": "$blue_highlight_secondary",
+        "editor.findMatchHighlightBackground": "$blue_highlight_background",
+        "editor.findRangeHighlightBackground": "$blue_highlight_background",
+        "editor.hoverHighlightBackground": "$lime_accent_background",
+        "editor.lineHighlightBackground": "$dark_blue_background",
+        "editor.lineHighlightBorder": "$dark_blue_background",
+        "editorLink.activeForeground": "$blue_primary",
+        "editor.rangeHighlightBackground": "$blue_highlight_background",
+        "editorWhitespace.foreground": "$blue_primary_background",
+        "editorIndentGuide.background": "$blue_primary_background",
+        "editorCodeLens.foreground": "$blue_secondary_lighter",
+        "editorBracketMatch.background": "$blue_highlight_background",
+        "editorBracketMatch.border": "$white",
+        "editor.foldBackground": "$dark_blue_background_hover",
+        "editorOverviewRuler.border": "$blue_secondary_light",
+        "editorOverviewRuler.findMatchForeground": "$blue_highlight_tertiary",
+        "editorOverviewRuler.modifiedForeground": "$blue_primary_highlight",
+        "editorOverviewRuler.addedForeground": "$green_highlight",
+        "editorOverviewRuler.deletedForeground": "$red_highlight",
+        "editorOverviewRuler.errorForeground": "$red_highlight",
+        "editorOverviewRuler.warningForeground": "$yellow_highlight",
+        "editorOverviewRuler.bracketMatchForeground": "$foreground_highlight",
+        "editorError.foreground": "$red_accent",
+        "editorWarning.foreground": "$yellow_accent",
+        "editorGutter.background": "$blue_tertiary",
+        "editorGutter.modifiedBackground": "$blue_primary_highlight",
+        "editorGutter.addedBackground": "$green_highlight",
+        "editorGutter.deletedBackground": "$red_highlight",
+
+        // Diff. Editor Colors
+        "diffEditor.insertedTextBackground": "$green_highlight_background",
+        "diffEditor.removedTextBackground": "$red_highlight_dark",
+
+        // Editor Widget Colors
+        "editorWidget.background": "$blue_tertiary",
+        "editorSuggestWidget.background": "$dark_blue_background",
+        "editorSuggestWidget.border": "$dark_blue_background",
+        "editorSuggestWidget.highlightForeground": "$blue_primary",
+        "editorHoverWidget.foreground": "$foreground",
+        "editorHoverWidget.background": "$dark_blue_background",
+        "editorHoverWidget.border": "$dark_blue_background",
+        "editorMarkerNavigation.background": "$blue_secondary_lighter",
+        "editorMarkerNavigationError.background": "$red_accent",
+        "editorMarkerNavigationWarning.background": "$yellow_accent",
+
+        // Peek View Colors
+        "peekView.border": "$dark_blue_background",
+        "peekViewEditor.background": "$dark_blue_background",
+        "peekViewEditorGutter.background": "$dark_blue_background",
+        "peekViewEditor.matchHighlightBackground": "$blue_highlight_background",
+        "peekViewResult.matchHighlightBackground": "$blue_highlight_background",
+        "peekViewTitle.background": "$dark_blue_background",
+
+        // Merge Conflicts
+        "merge.currentHeaderBackground": "$green_highlight_tertiary",
+        "merge.incomingHeaderBackground": "$blue_primary_highlight_secondary",
+
+        // Panel Colors
+        "panel.background": "$dark_blue_background",
+        "panel.border": "$blue_secondary_light",
+        "panelTitle.activeBorder": "$lime_accent",
+        "panelTitle.activeForeground": "$lime_accent",
+        "panelTitle.inactiveForeground": "$blue_secondary_lighter",
+
+        // Status Bar Colors
+        "statusBar.background": "$dark_blue_background",
+        "statusBar.debuggingBackground": "$red_accent",
+
+        // Title Bar Colors
+        "titleBar.activeBackground": "$dark_blue_background",
+
+        // Extensions
+        "extensionButton.prominentForeground": "$white",
+        "extensionButton.prominentBackground": "$blue_primary",
+        "extensionButton.prominentHoverBackground": "$blue_primary_hover",
+
+        // Quick Picker
+        "pickerGroup.border": "$blue_primary_background",
+        "pickerGroup.foreground": "$blue_secondary_lighter",
+
+        // Integrated Terminal Colors
+        "terminal.ansiBlack": "$blue_secondary_lighter",
+        "terminal.ansiBlue": "$blue_accent",
+        "terminal.ansiBrightBlack": "$blue_secondary_lighter",
+        "terminal.ansiBrightBlue": "$blue_accent",
+        "terminal.ansiBrightCyan": "$green_accent",
+        "terminal.ansiBrightGreen": "$lime_accent",
+        "terminal.ansiBrightMagenta": "$blue_primary",
+        "terminal.ansiBrightRed": "$red_accent",
+        "terminal.ansiBrightWhite": "$foreground_secondary",
+        "terminal.ansiBrightYellow": "$yellow_accent",
+        "terminal.ansiCyan": "$green_accent",
+        "terminal.ansiGreen": "$lime_accent",
+        "terminal.ansiMagenta": "$blue_primary",
+        "terminal.ansiRed": "$red_accent",
+        "terminal.ansiWhite": "$foreground_secondary",
+        "terminal.ansiYellow": "$yellow_accent",
+
+        // Debug
+        "debugToolBar.background": "$dark_blue_background",
+
+        // Git Colors
+        "gitDecoration.addedResourceForeground": "$lime_accent",
+        "gitDecoration.modifiedResourceForeground": "$blue_primary",
+        "gitDecoration.deletedResourceForeground": "$red_accent",
+        "gitDecoration.untrackedResourceForeground": "$green_accent",
+        "gitDecoration.ignoredResourceForeground": "$blue_secondary_lighter",
+        "gitDecoration.conflictingResourceForeground": "$yellow_accent",
+
+        // Extensions
+        "gitlens.trailingLineForegroundColor": "$blue_secondary_darker"
+    },
+    "tokenColors": [
+        // Standard Tokens
+        {
+            "name": "Comments",
+            "scope": "comment",
+            "settings": {
+                "foreground": "$blue_secondary_light"
+            }
+        },
+        {
+            "name": "Strings",
+            "scope": "string",
+            "settings": {
+                "foreground": "$lime_accent"
+            }
+        },
+
+        // Generic Scopes
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "settings": {
+                "foreground": "$yellow_accent"
+            }
+        },
+        {
+            "name": "Storage",
+            "scope": "storage",
+            "settings": {
+                "foreground": "$blue_primary",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "Storage Types",
+            "scope": "storage.type",
+            "settings": {
+                "foreground": "$blue_primary",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Argument",
+            "scope": "meta.function-call.arguments variable.parameter.function-call",
+            "settings": {
+                "foreground": "$green_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "Built-in Constants",
+            "scope": "constant.language",
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "User-defined Constants",
+            "scope": ["constant.character", "constant.other"],
+            "settings": { "foreground": "$red_accent" }
+        },
+        {
+            "name": "Class Names",
+            "scope": ["entity.name.class", "entity.name.type"],
+            "settings": {
+                "foreground": "$red_accent",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Keyword New",
+            "scope": "keyword.operator.new",
+            "settings": {
+                "foreground": "$yellow_accent"
+            }
+        },
+        {
+            "name": "Inherited Class",
+            "scope": "entity.other.inherited-class",
+            "settings": {
+                "foreground": "$red_accent",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Tag Names",
+            "scope": "entity.name.tag",
+            "settings": {
+                "foreground": "$red_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "Tag Attributes",
+            "scope": "entity.other.attribute-name",
+            "settings": {
+                "foreground": "$blue_primary",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Function Names",
+            "scope": ["entity.name.function", "meta.function-call.generic"],
+            "settings": {
+                "foreground": "$yellow_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "Library Functions",
+            "scope": "support.function",
+            "settings": {
+                "foreground": "$yellow_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "Library Constants",
+            "scope": "support.constant",
+            "settings": {
+                "foreground": "$yellow_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "Library Classes and Types",
+            "scope": ["support.type", "support.class"],
+            "settings": {
+                "foreground": "$green_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "Invalid",
+            "scope": "invalid",
+            "settings": {
+                "foreground": "$foreground"
+            }
+        },
+
+        // CSS/SCSS
+        {
+            "name": "[CSS/SCSS] Variable",
+            "scope": ["variable.scss", "variable.argument.css"],
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[CSS/SCSS] Additionnal Property Value",
+            "scope": ["meta.property-value.css", "meta.property-value.scss"],
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+
+        // Diff
+        {
+            "name": "[Diff] Header",
+            "scope": ["meta.diff", "meta.diff.header"],
+            "settings": {
+                "foreground": "$foreground_secondary",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "[Diff] Changed",
+            "scope": "markup.changed",
+            "settings": {
+                "foreground": "$blue_primary"
+            }
+        },
+        {
+            "name": "[Diff] Deleted",
+            "scope": "markup.deleted",
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Diff] Inserted",
+            "scope": "markup.inserted",
+            "settings": {
+                "foreground": "$green_accent"
+            }
+        },
+
+        // GraphQL
+        {
+            "name": "[GraphQL] Keyword",
+            "scope": ["keyword.fragment.graphql", "keyword.on.graphql"],
+            "settings": {
+                "foreground": "$blue_primary"
+            }
+        },
+        {
+            "name": "[GraphQL] Variable",
+            "scope": "variable.graphql",
+            "settings": {
+                "foreground": "$green_accent"
+            }
+        },
+        {
+            "name": "[GraphQL] Variable Parameter",
+            "scope": "variable.parameter.graphql",
+            "settings": {
+                "foreground": "$yellow_accent"
+            }
+        },
+
+        // Haml
+        {
+            "name": "[Haml] Tag Punctuation",
+            "scope": "text.haml punctuation.definition.tag",
+            "settings": {
+                "foreground": "$blue_primary",
+                "fontStyle": ""
+            }
+        },
+
+        // HTML
+        {
+            "name": "[HTML] Constant Character Entity",
+            "scope": "text.html.basic constant.character.entity.html",
+            "settings": {
+                "foreground": "$yellow_accent"
+            }
+        },
+        {
+            "name": "[HTML] Constant Other Inline Data",
+            "scope": "text.html.basic constant.other.inline-data",
+            "settings": {
+                "foreground": "$red_accent",
+                "fontStyle": "italic"
+            }
+        },
+
+        // Javascript
+        {
+            "name": "[Javascript] Try Catch",
+            "scope": "keyword.control.trycatch",
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Javascript] Debugger",
+            "scope": "keyword.other.debugger",
+            "settings": {
+                "foreground": "$red_accent",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "[Javascript] Punctuation and Comparison",
+            "scope": [
+                "keyword.operator.logical",
+                "keyword.operator.relational",
+                "keyword.operator.comparison"
+            ],
+            "settings": {
+                "foreground": "$red_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "[Javascript] Console Log/Warn/Error",
+            "scope": "support.function.console",
+            "settings": {
+                "foreground": "$blue_primary",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "[Javascript] Meta Object-Literal Key",
+            "scope": "meta.object-literal.key",
+            "settings": {
+                "foreground": "$green_accent"
+            }
+        },
+        {
+            "name": "[Javascript] JSDoc",
+            "scope": "storage.type.class.jsdoc",
+            "settings": {
+                "foreground": "$green_accent"
+            }
+        },
+        {
+            "name": "[Javascript] JSDoc @param",
+            "scope": "comment.block.documentation.js storage.type.class.jsdoc",
+            "settings": {
+                "foreground": "$green_highlight_secondary"
+            }
+        },
+        {
+            "name": "[Javascript] JSDoc @param's {type}",
+            "scope": "comment.block.documentation.js entity.name.type.instance.jsdoc",
+            "settings": {
+                "foreground": "$red_highlight_secondary"
+            }
+        },
+        {
+            "name": "[Javascript] JSDoc @param's {name} and Other",
+            "scope": "comment.block.documentation.js variable.other.jsdoc",
+            "settings": {
+                "foreground": "$blue_primary_highlight_secondary"
+            }
+        },
+        {
+            "name": "[Javascript] Support Type Primitive",
+            "scope": "support.type.primitive",
+            "settings": {
+                "foreground": "$blue_primary"
+            }
+        },
+        {
+            "name": "[Javascript] Default, Export and Import",
+            "scope": [
+                "keyword.control.default",
+                "keyword.control.export",
+                "keyword.control.import",
+                "meta.import"
+            ],
+            "settings": {
+                "foreground": "$blue_primary",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "[Javascript] Imported Object",
+            "scope": "meta.import variable.other.readwrite.alias",
+            "settings": {
+                "foreground": "$green_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "[Javascript] If Else, Switch, Return",
+            "scope": [
+                "keyword.control.conditional",
+                "keyword.control.switch",
+                "keyword.control.flow"
+            ],
+            "settings": {
+                "foreground": "$blue_primary"
+            }
+        },
+        {
+            "name": "[Javascript] This",
+            "scope": "variable.language.this",
+            "settings": {
+                "foreground": "$blue_primary"
+            }
+        },
+        {
+            "name": "[Javascript] Loop Continue/Break",
+            "scope": "keyword.control.loop",
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Javascript] Formatted String Expression",
+            "scope": "meta.template.expression",
+            "settings": {
+                "foreground": "$foreground"
+            }
+        },
+        {
+            "name": "[Javascript] Formatted String Expression Punctuation",
+            "scope": [
+                "punctuation.definition.template-expression.begin",
+                "punctuation.definition.template-expression.end"
+            ],
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Javascript] Object Definition",
+            "scope": "meta.object.type meta.definition.property",
+            "settings": {
+                "foreground": "$yellow_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "[Javascript] Regex",
+            "scope": [
+                "string.regexp",
+                "constant.other.character-class.regexp",
+                "constant.other.character-class.set.regexp"
+            ],
+            "settings": {
+                "foreground": "$yellow_accent"
+            }
+        },
+        {
+            "name": "[Javascript] Regex Punctuation",
+            "scope": "string.regexp punctuation",
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Javascript] Regex Anchor/Operator and Quantifier",
+            "scope": [
+                "string.regexp keyword.control.anchor",
+                "string.regexp keyword.operator"
+            ],
+            "settings": {
+                "foreground": "$blue_primary"
+            }
+        },
+        {
+            "name": "[Javascript] User-Defined Constant",
+            "scope": [
+                "variable.other.constant",
+                "variable.other.constant.property"
+            ],
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Javascript] Keyword Operator",
+            "scope": [
+                "keyword.operator.expression.typeof",
+                "keyword.operator.spread",
+                "keyword.operator.rest"
+            ],
+            "settings": {
+                "foreground": "$blue_primary"
+            }
+        },
+
+        // Markdown
+        {
+            "name": "[Markdown] Quote/Bold",
+            "scope": ["markup.quote", "markup.bold"],
+            "settings": {
+                "foreground": "$blue_primary"
+            }
+        },
+        {
+            "name": "[Markdown] Styling",
+            "scope": "markup.italic",
+            "settings": {
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "[Markdown] Punctuation",
+            "scope": [
+                "beginning.punctuation.definition.list.markdown",
+                "meta.separator.markdown"
+            ],
+            "settings": {
+                "foreground": "$blue_secondary_light"
+            }
+        },
+        {
+            "name": "[Markdown] Heading",
+            "scope": "markup.heading.markdown",
+            "settings": {
+                "foreground": "$green_accent"
+            }
+        },
+        {
+            "name": "[Markdown] Code",
+            "scope": ["markup.fenced_code.block", "markup.inline.raw"],
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Markdown] Link Brackets",
+            "scope": "meta.link.inline.markdown",
+            "settings": {
+                "foreground": "$blue_primary"
+            }
+        },
+        {
+            "name": "[Markdown] Link",
+            "scope": "meta.link.inline.markdown markup.underline.link.markdown",
+            "settings": {
+                "foreground": "$lime_accent"
+            }
+        },
+        {
+            "name": "[Markdown] Setext Header",
+            "scope": "markup.heading.setext",
+            "settings": {
+                "foreground": "$yellow_accent"
+            }
+        },
+
+        // Python
+        {
+            "name": "[Python] Import",
+            "scope": "keyword.codetag.notation",
+            "settings": {
+                "foreground": "$green_accent"
+            }
+        },
+
+        // React
+        {
+            "name": "[React] HTML Tags",
+            "scope": [
+                "punctuation.definition.tag.begin",
+                "punctuation.definition.tag.end"
+            ],
+            "settings": {
+                "foreground": "$red_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "[React] React Component Tags",
+            "scope": "support.class.component",
+            "settings": {
+                "foreground": "$green_accent",
+                "fontStyle": ""
+            }
+        },
+
+        // Ruby
+        {
+            "name": "[Ruby] Regex",
+            "scope": "source.ruby string.regexp.classic",
+            "settings": {
+                "foreground": "$yellow_accent"
+            }
+        },
+        {
+            "name": "[Ruby] Regex Punctuation",
+            "scope": "source.ruby string.regexp.classic punctuation.definition.string",
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Ruby] Variable Definition",
+            "scope": "source.ruby punctuation.definition.variable",
+            "settings": {
+                "foreground": "$red_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "[Ruby] Assignment Operator",
+            "scope": [
+                "source.ruby keyword.operator.assignment.augmented",
+                "source.ruby keyword.operator.logical"
+            ],
+            "settings": {
+                "foreground": "$red_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "[Ruby] Keyword Control",
+            "scope": [
+                "source.ruby keyword.control",
+                "source.ruby keyword.other.special-method"
+            ],
+            "settings": {
+                "foreground": "$blue_primary",
+                "fontStyle": ""
+            }
+        },
+
+        // Shell
+        {
+            "name": "[Shell] Control",
+            "scope": "source.shell keyword.control",
+            "settings": {
+                "foreground": "$blue_primary"
+            }
+        },
+        {
+            "name": "[Shell] Operator",
+            "scope": "source.shell keyword.operator",
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Shell] String Variable",
+            "scope": [
+                "source.shell string variable.other.bracket",
+                "source.shell string string.interpolated.dollar"
+            ],
+            "settings": {
+                "foreground": "$foreground"
+            }
+        },
+        {
+            "name": "[Shell] String Bracket",
+            "scope": [
+                "source.shell punctuation.definition",
+                "source.shell string variable.other.bracket punctuation.definition",
+                "source.shell string string.interpolated.dollar punctuation.definition"
+            ],
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Shell] Shebang",
+            "scope": "source.shell comment.line.number-sign.shebang.shell",
+            "settings": {
+                "foreground": "$yellow_accent"
+            }
+        },
+        {
+            "name": "[Shell] Shebang Hash",
+            "scope": "source.shell punctuation.definition.comment.shebang.shell",
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Shell] Newline",
+            "scope": "source.shell constant.character.escape.newline",
+            "settings": {
+                "foreground": "$blue_secondary_light"
+            }
+        },
+        {
+            "name": "[Shell] Comment",
+            "scope": "source.shell punctuation.definition.comment",
+            "settings": {
+                "foreground": "$blue_secondary_light"
+            }
+        },
+
+        // Typescript
+        {
+            "name": "[Typescript] Import Variable",
+            "scope": [
+                "source.ts meta.import.ts variable.other.readwrite.alias.ts",
+                "source.ts meta.import-equals.external.ts variable.other.readwrite.alias.ts",
+                "source.tsx meta.import.tsx variable.other.readwrite.alias.tsx",
+                "source.tsx meta.import-equals.external.tsx variable.other.readwrite.alias.tsx"
+            ],
+            "settings": {
+                "foreground": "$green_accent"
+            }
+        },
+        {
+            "name": "[Typescript] Punctuation and Comparison",
+            "scope": [
+                "source.ts keyword.operator.logical.ts",
+                "source.ts keyword.operator.relational.ts",
+                "source.ts keyword.operator.comparison.ts",
+                "source.tsx keyword.operator.logical.tsx",
+                "source.tsx keyword.operator.relational.tsx",
+                "source.tsx keyword.operator.comparison.tsx"
+            ],
+            "settings": {
+                "foreground": "$red_accent",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "[Typescript] Meta Object-Literal Key",
+            "scope": [
+                "source.ts meta.object-literal.key.ts",
+                "source.tsx meta.object-literal.key.tsx"
+            ],
+            "settings": {
+                "foreground": "$green_accent"
+            }
+        },
+        {
+            "name": "[Typescript] Typeof Expression",
+            "scope": [
+                "source.ts meta.type.annotation.ts keyword.operator.expression.typeof.ts",
+                "source.tsx meta.type.annotation.tsx keyword.operator.expression.typeof.tsx"
+            ],
+            "settings": {
+                "foreground": "$blue_primary"
+            }
+        },
+        {
+            "name": "[Typescript] Type Definition Property",
+            "scope": [
+                "source.ts meta.definition.property.ts",
+                "source.tsx meta.definition.property.tsx"
+            ],
+            "settings": {
+                "foreground": "$yellow_accent"
+            }
+        },
+        {
+            "name": "[Typescript] Require",
+            "scope": [
+                "source.ts keyword.control.require.ts",
+                "source.tsx keyword.control.require.tsx"
+            ],
+            "settings": {
+                "foreground": "$yellow_accent"
+            }
+        },
+        {
+            "name": "[Typescript] String Interpolation Punctuation",
+            "scope": [
+                "source.ts punctuation.definition.template-expression.begin",
+                "source.ts punctuation.definition.template-expression.end",
+                "source.tsx punctuation.definition.template-expression.begin",
+                "source.tsx punctuation.definition.template-expression.end"
+            ],
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+        {
+            "name": "[Typescript] Type Annotation",
+            "scope": [
+                "keyword.operator.optional",
+                "keyword.operator.definiteassignment"
+            ],
+            "settings": {
+                "foreground": "$red_accent"
+            }
+        },
+
+        // YAML
+        {
+            "name": "[YAML] Name Tag",
+            "scope": "source.yaml entity.name.tag",
+            "settings": {
+                "foreground": "$green_accent"
+            }
+        },
+        {
+            "name": "[YAML] Generic",
+            "scope": "source.yaml string.unquoted.plain.out.yaml",
+            "settings": {
+                "foreground": "$foreground"
+            }
+        }
+    ]
+}
