@@ -1,6 +1,6 @@
 # Change Log
 
-## Version x.x.x
+## Version 0.10.0
 - Add builder extension to help maintain and adjust the theme
   - Command to build the theme's file from `themes/theme-src.json` which supports comments and variables
   - Command to compare the active theme's file with a passed reference
