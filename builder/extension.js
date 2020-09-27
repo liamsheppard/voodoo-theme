@@ -16,16 +16,16 @@ function setContextEnabledValue(value) {
  * @param {vscode.ExtensionContext} extensionContext the extension's context.
  */
 function activate(extensionContext) {
-	// Refresh the theme source's file schema.
-	schema.refreshJsonSchema(extensionContext);
-
 	// Register extension's commands.
 	[
-		vscode.commands.registerCommand("voodoo.startBuilder", () => {
-			vscode.window.showInformationMessage("Voodoo theme's builder extension activated!");
-		}),
 		vscode.commands.registerCommand("voodoo.buildTheme", () => {
-			build.buildThemeFile(extensionContext);
+			try {
+				build.buildThemeFile();
+			} catch (e) {
+				vscode.window.showErrorMessage(
+					`The Voodoo theme builder failed to build the theme-src.json file. ${e}`
+				);
+			}
 		}),
 		vscode.commands.registerCommand("voodoo.checkConformity", () => {
 			const defaultReference =
@@ -45,6 +45,14 @@ function activate(extensionContext) {
 		"output",
 		vscode.window.createOutputChannel("Voodoo Builder")
 	);
+
+	try {
+		schema.refreshJsonSchema(extensionContext);
+	} catch (e) {
+		vscode.window.showErrorMessage(
+			"The Voodoo theme builder failed to refresh the theme-src.json's schema."
+		);
+	}
 
 	setContextEnabledValue(true);
 }

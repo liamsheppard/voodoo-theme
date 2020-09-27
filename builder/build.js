@@ -115,19 +115,20 @@ class ParsedThemeObject {
 }
 
 const { readFile, writeFile } = require("fs").promises;
+const vscode = require("vscode");
 
 /**
  * Retrieves the json schema for the Voodoo theme's source file from
  * vscode's built-in color theme schema and returns the resulting parsed
  * theme object.
- * @param {vscode.ExtensionContext} context the active Voodoo theme's extension context.
  */
-async function buildThemeFile(context) {
-	const themeSourcePath = context.extensionPath + "/themes/theme-src.json";
-	const themeSource = await readFile(themeSourcePath, "utf-8");
-
+async function buildThemeFile() {
+	const themeSourcePath = (await vscode.workspace.findFiles("**/themes/theme-src.json"))[0];
+	const themeSource = await readFile(themeSourcePath.fsPath, "utf-8");
 	const themeObject = new ParsedThemeObject(themeSource);
-	const themePath = context.extensionPath + "/themes/Voodoo-color-theme.json";
+
+	const themePath =
+		themeSourcePath.fsPath.slice(0, -"theme-src.json".length) + "Voodoo-color-theme.json";
 
 	await writeFile(themePath, JSON.stringify(themeObject) + "\n", "utf-8");
 }

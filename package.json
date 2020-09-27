@@ -25,8 +25,7 @@
 	],
 	"main": "builder/extension.js",
 	"activationEvents": [
-		"onCommand:voodoo.startBuilder",
-		"onCommand:voodoo.buildTheme"
+		"workspaceContains:**/themes/theme-src.json"
 	],
 	"contributes": {
 		"jsonValidation": [
@@ -36,10 +35,6 @@
 			}
 		],
 		"commands": [
-			{
-				"command": "voodoo.startBuilder",
-				"title": "Voodoo: Start Voodoo theme's builder extension"
-			},
 			{
 				"command": "voodoo.buildTheme",
 				"title": "Voodoo: Build Voodoo theme's file from source"
@@ -51,10 +46,6 @@
 		],
 		"menus": {
 			"commandPalette": [
-				{
-					"command": "voodoo.startBuilder",
-					"when": "voodoo.builder.enabled == false"
-				},
 				{
 					"command": "voodoo.buildTheme",
 					"when": "voodoo.builder.enabled == true"
