@@ -4,19 +4,12 @@
 		{
 			"label": "Build Voodoo Theme",
 			"detail": "Build Voodoo theme's file from source",
-			"command": "echo ${input:build}",
+			"command": "node ./builder build-theme",
 			"type": "shell",
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			}
-		}
-	],
-	"inputs": [
-		{
-			"id": "build",
-			"type": "command",
-			"command": "voodoo.buildTheme"
 		}
 	]
 }

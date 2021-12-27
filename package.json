@@ -2,8 +2,13 @@
 	"name": "voodoo",
 	"displayName": "Voodoo",
 	"description": "A dark, supernatural and neon-inspired theme",
-	"version": "0.10.0",
+	"version": "0.11.0",
 	"publisher": "liamsheppard",
+	"scripts": {
+		"build": "node ./builder build-theme",
+		"build-theme": "node ./builder build-theme",
+		"build-schema": "node ./builder build-schema"
+	},
 	"galleryBanner": {
 		"color": "#25273e",
 		"theme": "dark"
@@ -23,39 +28,17 @@
 	"categories": [
 		"Themes"
 	],
-	"main": "builder/extension.js",
+	"main": "builder/vscode-extension.js",
 	"activationEvents": [
-		"workspaceContains:**/themes/theme-src.json"
+		"workspaceContains:**/Voodoo-color-source.json"
 	],
 	"contributes": {
 		"jsonValidation": [
 			{
-				"fileMatch": "themes/theme-src.json",
-				"url": "./theme-src.schema.json"
+				"fileMatch": "**/Voodoo-color-source.json",
+				"url": "./themes/Voodoo-color-source.schema.json"
 			}
 		],
-		"commands": [
-			{
-				"command": "voodoo.buildTheme",
-				"title": "Voodoo: Build Voodoo theme's file from source"
-			},
-			{
-				"command": "voodoo.checkConformity",
-				"title": "Voodoo: Check the active Voodoo theme's file conformity to a given reference."
-			}
-		],
-		"menus": {
-			"commandPalette": [
-				{
-					"command": "voodoo.buildTheme",
-					"when": "voodoo.builder.enabled == true"
-				},
-				{
-					"command": "voodoo.checkConformity",
-					"when": "voodoo.builder.enabled == true"
-				}
-			]
-		},
 		"themes": [
 			{
 				"label": "Voodoo",
@@ -64,10 +47,8 @@
 			}
 		]
 	},
-	"dependencies": {
-		"strip-json-comments": "^3.1.0"
-	},
 	"devDependencies": {
+		"strip-json-comments": "^3.1.0",
 		"vsce": "^1.40.0"
 	}
 }
