@@ -113,6 +113,8 @@
         "tab.border": "$dark_blue_background",
         "tab.inactiveBackground": "$dark_blue_background",
         "tab.inactiveForeground": "$blue_secondary",
+        "badge.background": "$blue_secondary_hover",
+        "badge.foreground": "$white",
 
         // Editor Colors
         "editor.background": "$blue_tertiary",
@@ -175,6 +177,11 @@
         "peekViewEditor.matchHighlightBackground": "$blue_highlight_background",
         "peekViewResult.matchHighlightBackground": "$blue_highlight_background",
         "peekViewTitle.background": "$dark_blue_background",
+        "peekViewResult.background": "$darker_blue_background",
+        "peekViewResult.selectionBackground": "$lime_accent",
+        "peekViewResult.selectionForeground": "$dark_blue_background",
+        "peekViewTitleLabel.foreground": "$lime_accent",
+        "peekViewTitleDescription.foreground": "$blue_secondary_light",
 
         // Merge Conflicts
         "merge.currentHeaderBackground": "$green_highlight_tertiary",
@@ -189,10 +196,14 @@
 
         // Status Bar Colors
         "statusBar.background": "$dark_blue_background",
+        "statusBar.noFolderBackground": "$dark_blue_background",
         "statusBar.debuggingBackground": "$red_accent",
 
         // Title Bar Colors
         "titleBar.activeBackground": "$dark_blue_background",
+        "titleBar.activeForeground": "$white",
+        "titleBar.inactiveBackground": "$blue_secondary_hover",
+        "titleBar.inactiveForeground": "$white",
 
         // Extensions
         "extensionButton.prominentForeground": "$white",
