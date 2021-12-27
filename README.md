@@ -24,8 +24,8 @@ yarn install # or npm install
 yarn build # or npm run build
 ```
 
-The theme's builder will read the `./themes/Voodoo-color-source.json` source file from either the active vscode's workspace or its own root path (`./builder/../themes/`). The resulting file is then output in the source file's directory as `Voodoo-color-theme.json`.
+The theme's builder will read the `./themes/Voodoo-color-source.json` source file from either the active vscode's workspace or its own root path (`./builder/../themes/`). The resulting file is then output in the same directory as `Voodoo-color-theme.json`.
 
-Conversely, the recommended setup is to simply grab the theme from its git repository and work from there. Working directly from the repository's also comes with extra benefits such as pre-configured `.vscode/*.json` settings to debug using the extension host or build using the "Build Task" or the `ctrl+shift+b` shortcut.
+Conversely, the recommended setup is to simply grab the theme from its git repository and work from there. Working directly from the repository's also comes with extra benefits such as pre-configured `.vscode/*.json` settings to debug using the extension host and build using the "Build Task" or the `ctrl+shift+b` shortcut.
 
-Finally, the builder's uses the `./builder/vscode-extension.js` module as its entry point to generate `./themes/Voodoo-color-source.schema.json`, a json schema file which is used to validate the theme's source file formatting as well as provide useful insight and descriptions while editing.
+Finally, the builder uses the `./builder/vscode-extension.js` module as its entry point to generate `./themes/Voodoo-color-source.schema.json`, a json schema file which is used to validate the theme's source file formatting as well as provide useful insight and descriptions while editing.
