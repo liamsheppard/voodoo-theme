@@ -27,11 +27,11 @@ class ParsedThemeObject {
 
 		source.useRawValues = useRawValues;
 
-		this._parseColors(source);
-		this._parseTokenColors(source);
+		this.#parseColors(source);
+		this.#parseTokenColors(source);
 	}
 
-	_parseVariable(value, source) {
+	#parseVariable(value, source) {
 		const components = value.split(" ");
 
 		// Check if variable exists.
@@ -70,7 +70,7 @@ class ParsedThemeObject {
 			: (value += !isNaN(alpha) ? parseInt(alpha * 255).toString(16) : "00");
 	}
 
-	_parseTokenColors(source) {
+	#parseTokenColors(source) {
 		// Check if the theme's source does contain token colors.
 		if (!source.hasOwnProperty("tokenColors")) {
 			return;
@@ -90,13 +90,13 @@ class ParsedThemeObject {
 				return;
 			}
 
-			scope.settings.foreground = this._parseVariable(scope.settings.foreground, source);
+			scope.settings.foreground = this.#parseVariable(scope.settings.foreground, source);
 		});
 
 		this.tokenColors = tokenColors;
 	}
 
-	_parseColors(source) {
+	#parseColors(source) {
 		// Check if the theme's source does contain colors.
 		if (!source.hasOwnProperty("colors")) {
 			return;
@@ -109,7 +109,7 @@ class ParsedThemeObject {
 
 		// Parse colors from the source's colors and variables properties.
 		Object.entries(source.colors).forEach(([key, value]) => {
-			this.colors[key] = this._parseVariable(value, source);
+			this.colors[key] = this.#parseVariable(value, source);
 		});
 	}
 }
