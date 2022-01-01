@@ -27,11 +27,11 @@ class ParsedThemeObject {
 
 		source.useRawValues = useRawValues;
 
-		this._parseColors(source);
-		this._parseTokenColors(source);
+		this.#parseColors(source);
+		this.#parseTokenColors(source);
 	}
 
-	_parseVariable(value, source) {
+	#parseVariable(value, source) {
 		const components = value.split(" ");
 
 		// Check if variable exists.
@@ -70,7 +70,7 @@ class ParsedThemeObject {
 			: (value += !isNaN(alpha) ? parseInt(alpha * 255).toString(16) : "00");
 	}
 
-	_parseTokenColors(source) {
+	#parseTokenColors(source) {
 		// Check if the theme's source does contain token colors.
 		if (!source.hasOwnProperty("tokenColors")) {
 			return;
@@ -90,13 +90,13 @@ class ParsedThemeObject {
 				return;
 			}
 
-			scope.settings.foreground = this._parseVariable(scope.settings.foreground, source);
+			scope.settings.foreground = this.#parseVariable(scope.settings.foreground, source);
 		});
 
 		this.tokenColors = tokenColors;
 	}
 
-	_parseColors(source) {
+	#parseColors(source) {
 		// Check if the theme's source does contain colors.
 		if (!source.hasOwnProperty("colors")) {
 			return;
@@ -109,13 +109,14 @@ class ParsedThemeObject {
 
 		// Parse colors from the source's colors and variables properties.
 		Object.entries(source.colors).forEach(([key, value]) => {
-			this.colors[key] = this._parseVariable(value, source);
+			this.colors[key] = this.#parseVariable(value, source);
 		});
 	}
 }
 
 const { readFile, writeFile } = require("fs").promises;
-const vscode = require("vscode");
+const paths = require("./paths/paths");
+const logger = require("./logger");
 
 /**
  * Retrieves the json schema for the Voodoo theme's source file from
@@ -123,14 +124,40 @@ const vscode = require("vscode");
  * theme object.
  */
 async function buildThemeFile() {
-	const themeSourcePath = (await vscode.workspace.findFiles("**/themes/theme-src.json"))[0];
-	const themeSource = await readFile(themeSourcePath.fsPath, "utf-8");
+	logger.log("Build started...", "build");
+	logger.log(`Will be using '${paths.getInstanceType()}' to retrieve paths.`, "build");
+
+	const themeSourcesPaths = await paths.getThemeSourcesPaths();
+	let themeSourcePath = undefined;
+
+	switch (themeSourcesPaths.length) {
+		case 1:
+			themeSourcePath = themeSourcesPaths[0];
+			break;
+
+		case 0:
+			logger.log("BUILD FAILED: no suitable Voodoo theme source file found in the current workspace!\n", "build");
+			await paths.hintPotentialThemeSourcesPaths();
+			return;
+
+		default:
+			logger.log("BUILD FAILED: found multiple suitable Voodoo theme source files in the current workspace! Please keep a single active source file under the '**/themes/' directory before building.\n", "build");
+			await paths.hintSuitableThemeSourcesPaths();
+			return;
+	}
+
+	logger.log(`Reading theme from '${themeSourcePath}'`, "build");
+
+	const themeSource = await readFile(themeSourcePath, "utf-8");
 	const themeObject = new ParsedThemeObject(themeSource);
 
-	const themePath =
-		themeSourcePath.fsPath.slice(0, -"theme-src.json".length) + "Voodoo-color-theme.json";
+	const buildPath = paths.getBuildPathFrom(themeSourcePath);
 
-	await writeFile(themePath, JSON.stringify(themeObject) + "\n", "utf-8");
+	logger.log(`Writing theme to '${buildPath}'`, "build");
+
+	await writeFile(buildPath, JSON.stringify(themeObject) + "\n", "utf-8");
+
+	logger.log("BUILD SUCCEEDED.\n", "build");
 }
 
 module.exports = { buildThemeFile, ParsedThemeObject };

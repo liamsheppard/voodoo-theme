@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 0.11.0
+- Update the builder's workflow so it's easier to use
+  - Add instructions to README.md
+
 ## Version 0.10.0
 - Add builder extension to help maintain and adjust the theme
   - Command to build the theme's file from `themes/theme-src.json` which supports comments and variables

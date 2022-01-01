@@ -1,4 +1,4 @@
+.vscode/
 .editorconfig
 .gitignore
-theme-src.schema.json
 vsc-extension-quickstart.md
