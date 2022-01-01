@@ -29,3 +29,5 @@ The theme's builder will read the `./themes/Voodoo-color-source.json` source fil
 Conversely, the recommended setup is to simply grab the theme from its git repository and work from there. Working directly from the repository's also comes with extra benefits such as pre-configured `.vscode/*.json` settings to debug using the extension host and build using the "Build Task" or the `ctrl+shift+b` shortcut.
 
 Finally, the builder uses the `./builder/vscode-extension.js` module as its entry point to generate `./themes/Voodoo-color-source.schema.json`, a json schema file which is used to validate the theme's source file formatting as well as provide useful insight and descriptions while editing.
+
+The above-mentioned `*.schema.json` file is automatically generated (and used) by the extension when the `./themes/Voodoo-color-source.json` file is detected in the active vscode window's workspace or when the extension is run / debug if working from a repository clone.

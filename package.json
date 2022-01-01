@@ -6,8 +6,7 @@
 	"publisher": "liamsheppard",
 	"scripts": {
 		"build": "node ./builder build-theme",
-		"build-theme": "node ./builder build-theme",
-		"build-schema": "node ./builder build-schema"
+		"build-theme": "node ./builder build-theme"
 	},
 	"galleryBanner": {
 		"color": "#25273e",

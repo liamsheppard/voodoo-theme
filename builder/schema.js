@@ -98,26 +98,30 @@ const VOODOO_THEME_SCHEMA_EDITS = {
 	},
 };
 
-async function retrieveSchema(uri) {
-	return JSON.parse((await vscode.workspace.openTextDocument(uri)).getText());
+/**
+ * @param {vscode.Uri} uri Uri to retrieve the json schema from.
+ */
+async function retrieveSchemaFromUri(uri) {
+	const schemaDefinitionFile = await vscode.workspace.openTextDocument(uri);
+	return JSON.parse(schemaDefinitionFile.getText());
 }
 
-async function applyEditsMapToJson(jsonObject, map) {
+async function applyEditsMapToJson(jsonSchemaObject, map) {
 	// Exit on invalid parameters (empty map branch).
-	if (typeof jsonObject !== "object" || typeof map !== "object") {
+	if (typeof jsonSchemaObject !== "object" || typeof map !== "object") {
 		return;
 	}
 
 	// Resolve any object-type referenced by the $ref property's value.
-	const containsReference = jsonObject.hasOwnProperty("$ref") && map.hasOwnProperty("$ref");
+	const containsReference = jsonSchemaObject.hasOwnProperty("$ref") && map.hasOwnProperty("$ref");
 
 	if (containsReference && typeof map["$ref"] === "object") {
-		const schema = await retrieveSchema(vscode.Uri.parse(jsonObject["$ref"]));
+		const schema = await retrieveSchemaFromUri(vscode.Uri.parse(jsonSchemaObject["$ref"]));
 		const mappedProperties = map["$ref"];
 
-		delete jsonObject["$ref"];
+		delete jsonSchemaObject["$ref"];
 		Object.getOwnPropertyNames(schema).forEach((property) => {
-			jsonObject[property] = schema[property];
+			jsonSchemaObject[property] = schema[property];
 		});
 
 		delete map["$ref"];
@@ -125,10 +129,10 @@ async function applyEditsMapToJson(jsonObject, map) {
 			map[property] = mappedProperties[property];
 		});
 
-		return await applyEditsMapToJson(jsonObject, map);
+		return await applyEditsMapToJson(jsonSchemaObject, map);
 	}
 
-	for (const key of Object.getOwnPropertyNames(jsonObject)) {
+	for (const key of Object.getOwnPropertyNames(jsonSchemaObject)) {
 		// Handle unmapped key.
 		if (!map.hasOwnProperty(key) && !map.hasOwnProperty("$voodooJoker")) {
 			continue;
@@ -141,44 +145,47 @@ async function applyEditsMapToJson(jsonObject, map) {
 			Object.getOwnPropertyNames(mappedKey)
 				.filter((x) => {
 					if (typeof mappedKey[x] === "object") {
-						return jsonObject[key].hasOwnProperty(x)
-							? typeof jsonObject[key][x] !== "object" && x !== "$ref"
+						return jsonSchemaObject[key].hasOwnProperty(x)
+							? typeof jsonSchemaObject[key][x] !== "object" && x !== "$ref"
 							: x !== "$voodooJoker";
 					} else {
 						return true;
 					}
 				})
 				.forEach((property) => {
-					jsonObject[key][property] = mappedKey[property];
+					jsonSchemaObject[key][property] = mappedKey[property];
 				});
 		} else {
-			jsonObject[key] = mappedKey;
+			jsonSchemaObject[key] = mappedKey;
 		}
 
 		// Explore object types recursively.
-		if (typeof jsonObject[key] === "object") {
-			await applyEditsMapToJson(jsonObject[key], mappedKey);
+		if (typeof jsonSchemaObject[key] === "object") {
+			await applyEditsMapToJson(jsonSchemaObject[key], mappedKey);
 		}
 	}
 }
 
+const paths = require("./paths/paths");
+
 /**
- * Retrieves the json schema for the Voodoo theme's source file from
- * vscode's built-in color theme schema.
- * @param {vscode.ExtensionContext} context the active Voodoo theme's extension context.
+ * Refreshes the json schema file used by the extension to validate Voodoo's
+ * theme source.
+ * @param {vscode.ExtensionContext} context Voodoo's current extension context.
  */
 async function refreshJsonSchema(context) {
-	const voodooSchemaPath = context.extensionPath + "/theme-src.schema.json";
-	const builtInColorThemeUri = vscode.Uri.parse("vscode://schemas/color-theme");
+	// Retrieve the built-in json schema for themes from vscode's resources.
+	const builtInSchemaUri = vscode.Uri.parse("vscode://schemas/color-theme");
+	const builtInJsonSchema = await retrieveSchemaFromUri(builtInSchemaUri);
 
-	// Read default json schema resource.
-	let themeJsonSchema = await retrieveSchema(builtInColorThemeUri);
+	// Apply edits to the retrieved built-in json schema to address Voodoo's
+	// theme source needs.
+	await applyEditsMapToJson(builtInJsonSchema, VOODOO_THEME_SCHEMA_EDITS);
 
-	// Apply edits to match theme-src's needs.
-	await applyEditsMapToJson(themeJsonSchema, VOODOO_THEME_SCHEMA_EDITS);
-
-	// Write result to the extension's schema file.
-	await writeFile(voodooSchemaPath, JSON.stringify(themeJsonSchema) + "\n", "utf-8");
+	// Write the resulting json schema file at the expected path from the current
+	// extension's root.
+	const voodooSchemaPath = `${context.extensionPath}/themes/${paths.THEME_SOURCE_SCHEMA_FILENAME}`;
+	await writeFile(voodooSchemaPath, JSON.stringify(builtInJsonSchema) + "\n", "utf-8");
 }
 
 module.exports = { refreshJsonSchema };

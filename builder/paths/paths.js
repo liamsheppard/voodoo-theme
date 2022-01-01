@@ -1,4 +1,5 @@
 const THEME_SOURCE_FILENAME = "Voodoo-color-source.json";
+const THEME_SOURCE_SCHEMA_FILENAME = "Voodoo-color-source.schema.json";
 const THEME_BUILD_FILENAME = "Voodoo-color-theme.json";
 
 const logger = require("../logger");
@@ -30,7 +31,7 @@ function getThemeSourcesPaths() {
 }
 
 /**
- * Derives the build's path based on the used theme source's path.
+ * Returns the build's path based on the used theme source's path.
  * @param {string} sourcePath the source path we are building from.
  * @returns {string} the build path derived from the source path passed as parameter.
  */
@@ -81,4 +82,4 @@ function getInstanceType() {
 	return paths.instance.getInstanceType();
 }
 
-module.exports = { getThemeSourcesPaths, getBuildPathFrom, hintPotentialThemeSourcesPaths, hintSuitableThemeSourcesPaths, getInstanceType };
+module.exports = { getThemeSourcesPaths, getBuildPathFrom, hintPotentialThemeSourcesPaths, hintSuitableThemeSourcesPaths, getInstanceType, THEME_SOURCE_SCHEMA_FILENAME };

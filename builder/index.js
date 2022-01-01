@@ -13,11 +13,7 @@ switch (cmd) {
 		require("./build").buildThemeFile();
 		break;
 
-	case "build-schema":
-		require("./build").buildJsonSchema();
-		break;
-
 	default:
-		console.error(`Unsupported command: '${cmd}'!`)
+		console.error(`Unsupported command: '${cmd}'! - usage: ./builder build-theme`);
 		break;
 }

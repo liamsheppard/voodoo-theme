@@ -160,8 +160,4 @@ async function buildThemeFile() {
 	logger.log("BUILD SUCCEEDED.\n", "build");
 }
 
-async function buildJsonSchema() {
-	logger.log("buildJsonSchema not implemented yet.", "build");
-}
-
-module.exports = { buildThemeFile, ParsedThemeObject, buildJsonSchema };
+module.exports = { buildThemeFile, ParsedThemeObject };
